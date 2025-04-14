@@ -10,8 +10,8 @@ app = FastAPI()
 # Allow frontend origin
 origins = [
     "http://localhost:5173", 
-    "finance-tutor-ai.vercel.app"
-    "finance-tutor-ai-john-zontos-projects.vercel.app" 
+    "http://finance-tutor-ai.vercel.app"
+    "http://finance-tutor-ai-john-zontos-projects.vercel.app" 
 ]
 
 app.add_middleware(
