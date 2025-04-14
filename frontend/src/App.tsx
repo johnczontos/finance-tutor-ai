@@ -1,47 +1,18 @@
 // src/App.tsx
-import React, { useState } from 'react';
+import Sidebar from './components/Sidebar';
+import ChatWindow from './components/ChatWindow';
 import ChatInput from './components/ChatInput';
-import AnswerDisplay from './components/AnswerDisplay';
-import { fetchAnswer } from './api/api';
 
-const App: React.FC = () => {
-  const [query, setQuery] = useState('');
-  const [answer, setAnswer] = useState('');
-  const [sources, setSources] = useState<string[]>([]);
-  const [loading, setLoading] = useState(false);
-  const [error, setError] = useState('');
-
-  const handleSubmit = async () => {
-    if (!query.trim()) return;
-    setLoading(true);
-    setError('');
-    try {
-      const response = await fetchAnswer(query);
-      setAnswer(response.answer);
-      setSources(response.sources);
-    } catch (err: any) {
-      setError(err.message || 'Something went wrong.');
-    } finally {
-      setLoading(false);
-    }
-  };
-
+export default function App() {
   return (
-    <div className="min-h-screen bg-gray-100 p-6">
-      <h1 className="text-3xl font-bold mb-4">Finance Tutor AI</h1>
-      <ChatInput
-        query={query}
-        setQuery={setQuery}
-        onSubmit={handleSubmit}
-        loading={loading}
-      />
-      <AnswerDisplay
-        answer={answer}
-        sources={sources}
-        error={error}
-      />
+    <div className="flex min-h-screen bg-gray-50 text-gray-800">
+      <Sidebar />
+      <div className="flex flex-col flex-1 p-8 relative">
+        <ChatWindow />
+        <div className="absolute bottom-0 left-0 right-0 px-8 py-4 bg-white border-t">
+          <ChatInput />
+        </div>
+      </div>
     </div>
   );
-};
-
-export default App;
+}
