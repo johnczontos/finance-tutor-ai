@@ -1,18 +1,24 @@
-export default function ChatWindow() {
-    return (
-      <div className="mb-24"> {/* pushes chat input out of the way */}
-        <div className="flex items-center gap-3 mb-4">
-          <span className="text-4xl">💬</span>
-          <h1 className="text-3xl font-bold">FinanceTutor AI</h1>
+import { ChatMessage } from '../types/types';
+
+type Props = {
+  messages: ChatMessage[];
+};
+
+export default function ChatWindow({ messages }: Props) {
+  return (
+    <div className="flex flex-col space-y-4 max-h-[calc(100vh-160px)] overflow-y-auto p-6">
+      {messages.map((msg, i) => (
+        <div
+          key={i}
+          className={`max-w-xl px-4 py-2 rounded-lg text-sm ${
+            msg.role === 'user'
+              ? 'bg-blue-100 self-end'
+              : 'bg-gray-100 self-start'
+          }`}
+        >
+          {msg.content}
         </div>
-        <div className="flex items-center gap-2 bg-yellow-100 border border-yellow-300 rounded px-4 py-2 w-fit text-sm">
-          🧠 <span>Hi! How may I help you?</span>
-        </div>
-  
-        <button className="mt-4 px-4 py-2 border rounded text-sm hover:bg-gray-100 transition">
-          Reset Chat
-        </button>
-      </div>
-    );
-  }
-  
+      ))}
+    </div>
+  );
+}

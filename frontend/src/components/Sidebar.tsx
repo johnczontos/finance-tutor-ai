@@ -1,19 +1,27 @@
-export default function Sidebar() {
-    return (
-      <div className="w-64 bg-gray-100 border-r p-6">
-        <h2 className="text-xl font-bold mb-4">Navigation</h2>
-        <p className="text-sm font-medium mb-2">AI Help Mode:</p>
-        <ul className="space-y-2">
-          {["Quick Question", "In Depth Explanation", "Create a Study Guide", "Study Mode"].map((mode, i) => (
-            <li key={mode}>
-              <label className="flex items-center gap-2">
-                <input type="radio" name="mode" defaultChecked={i === 0} />
-                <span>{mode}</span>
-              </label>
-            </li>
-          ))}
-        </ul>
+type Props = {
+  isOpen: boolean;
+  onClose: () => void;
+};
+
+export default function Sidebar({ isOpen, onClose }: Props) {
+  return (
+    <div
+      className={`fixed top-0 left-0 h-full w-64 bg-white shadow-lg transform transition-transform duration-300 z-50 ${
+        isOpen ? 'translate-x-0' : '-translate-x-full'
+      }`}
+    >
+      <div className="flex items-center justify-between px-4 py-3 border-b">
+        <h2 className="text-lg font-bold">Menu</h2>
+        <button onClick={onClose} className="text-gray-500 hover:text-red-500 text-lg">
+          ✕
+        </button>
       </div>
-    );
-  }
-  
+      <nav className="p-4 space-y-2 text-sm">
+        <a href="#" className="block hover:text-blue-600">Quick Questions</a>
+        <a href="#" className="block hover:text-blue-600">Study Mode</a>
+        <a href="#" className="block hover:text-blue-600">Progress</a>
+        <a href="#" className="block hover:text-blue-600">Settings</a>
+      </nav>
+    </div>
+  );
+}
