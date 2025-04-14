@@ -1,10 +1,26 @@
 # main.py
 
-from fastapi import FastAPI, HTTPException
+from fastapi import FastAPI
+from fastapi.middleware.cors import CORSMiddleware
 from pydantic import BaseModel
-from backend.rag_chain import qa_chain
+from rag_chain import qa_chain
 
 app = FastAPI()
+
+# Allow frontend origin
+origins = [
+    "http://localhost:5173", 
+    "finance-tutor-ai.vercel.app"
+    "finance-tutor-ai-john-zontos-projects.vercel.app" 
+]
+
+app.add_middleware(
+    CORSMiddleware,
+    allow_origins=origins,           # Or use ["*"] for all
+    allow_credentials=True,
+    allow_methods=["*"],
+    allow_headers=["*"],
+)
 
 class QueryRequest(BaseModel):
     query: str
