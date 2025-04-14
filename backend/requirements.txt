@@ -46,6 +46,7 @@ iniconfig==2.1.0
 isort==5.10.1
 Jinja2==3.1.2
 jiter==0.9.0
+joblib==1.4.2
 jsonpatch==1.33
 jsonpointer==3.0.0
 keras==2.10.0
@@ -109,8 +110,9 @@ requests-oauthlib==1.3.1
 requests-toolbelt==1.0.0
 responses==0.18.0
 rsa==4.9
+scikit-learn==1.6.1
+scipy==1.15.2
 six==1.16.0
-sklearn==0.0.post2
 smart-open==6.3.0
 sniffio==1.3.1
 spacy==3.5.0
@@ -129,6 +131,7 @@ tensorflow-estimator==2.10.0
 tensorflow-io-gcs-filesystem==0.27.0
 termcolor==2.1.0
 thinc==8.1.9
+threadpoolctl==3.6.0
 tiktoken==0.9.0
 tomli==2.0.1
 tomlkit==0.11.5
