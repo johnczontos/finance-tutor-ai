@@ -8,6 +8,7 @@ import { ChatMessage } from './types/types';
 function App() {
   const [messages, setMessages] = useState<ChatMessage[]>([]);
   const [sidebarOpen, setSidebarOpen] = useState(false);
+  const [knowledgeCheckEnabled, setKnowledgeCheckEnabled] = useState(false);
 
   const addMessage = (msg: ChatMessage) => {
     setMessages((prev) => [...prev, msg]);
@@ -15,7 +16,12 @@ function App() {
 
   return (
     <div className="flex flex-col h-screen bg-gray-50 relative">
-      <Sidebar isOpen={sidebarOpen} onClose={() => setSidebarOpen(false)} />
+      <Sidebar
+        isOpen={sidebarOpen}
+        onClose={() => setSidebarOpen(false)}
+        knowledgeCheckEnabled={knowledgeCheckEnabled}
+        onToggleKnowledgeCheck={() => setKnowledgeCheckEnabled(prev => !prev)}
+      />
       <Header onToggleSidebar={() => setSidebarOpen(!sidebarOpen)} />
       <div className="flex-1 overflow-y-auto pt-2">
         <ChatWindow messages={messages} />

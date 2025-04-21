@@ -1,9 +1,13 @@
+import EnableKnowledgeCheck from './EnableKnowledgeCheck';
+
 type Props = {
   isOpen: boolean;
   onClose: () => void;
+  knowledgeCheckEnabled: boolean;
+  onToggleKnowledgeCheck: () => void;
 };
 
-export default function Sidebar({ isOpen, onClose }: Props) {
+export default function Sidebar({ isOpen, onClose, knowledgeCheckEnabled, onToggleKnowledgeCheck }: Props) {
   return (
     <div
       className={`fixed top-0 left-0 h-full w-64 bg-white shadow-lg transform transition-transform duration-300 z-50 ${
@@ -16,12 +20,14 @@ export default function Sidebar({ isOpen, onClose }: Props) {
           ✕
         </button>
       </div>
-      <nav className="p-4 space-y-2 text-sm">
-        <a href="#" className="block hover:text-blue-600">Quick Questions</a>
-        <a href="#" className="block hover:text-blue-600">Study Mode</a>
-        <a href="#" className="block hover:text-blue-600">Progress</a>
-        <a href="#" className="block hover:text-blue-600">Settings</a>
-      </nav>
+
+      <div className="p-4 space-y-6">
+        <EnableKnowledgeCheck
+          enabled={knowledgeCheckEnabled}
+          onToggle={onToggleKnowledgeCheck}
+        />
+        {/* You can add more sidebar menu items here if needed */}
+      </div>
     </div>
   );
 }
