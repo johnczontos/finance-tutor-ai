@@ -1,16 +1,14 @@
 import { useState } from 'react';
 import { ChatMessage } from '../types/types';
-import { fetchAnswer } from '../api/api';
 
 type Props = {
   onSend: (msg: ChatMessage) => void;
-  onResponse: (msg: ChatMessage) => void;
 };
 
-export default function ChatInput({ onSend, onResponse }: Props) {
+export default function ChatInput({ onSend }: Props) {
   const [input, setInput] = useState('');
 
-  const handleSubmit = async (e: React.FormEvent) => {
+  const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
     const trimmed = input.trim();
     if (!trimmed) return;
@@ -18,17 +16,6 @@ export default function ChatInput({ onSend, onResponse }: Props) {
     const userMessage: ChatMessage = { role: 'user', content: trimmed };
     onSend(userMessage);
     setInput('');
-
-    try {
-      const result = await fetchAnswer(trimmed);
-      const assistantMessage: ChatMessage = {
-        role: 'assistant',
-        content: result.answer,
-      };
-      onResponse(assistantMessage);
-    } catch (err) {
-      onResponse({ role: 'assistant', content: '⚠️ Something went wrong.' });
-    }
   };
 
   return (

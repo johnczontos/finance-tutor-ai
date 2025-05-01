@@ -2,6 +2,7 @@
 
 import os
 from dotenv import load_dotenv
+from typing import Dict
 from langchain_openai import ChatOpenAI, OpenAIEmbeddings
 from langchain_pinecone import PineconeVectorStore
 from langchain.chains import RetrievalQA
@@ -22,25 +23,61 @@ pc = Pinecone(api_key=pinecone_api_key)
 index_name = "financetutor"
 vectorstore = PineconeVectorStore(index_name=index_name, embedding=embeddings)
 
-# Prompt Template (optional, customize)
-prompt_template = PromptTemplate(
-    input_variables=["context", "question"],
-    template="""
-    You are a finance tutor. Use the following context to answer the question.
-    Cite sources where appropriate.
+# Prompt templates based on detail level
+base_template = """
+You are an AI designed to answer questions with clear and concise explanations.
+Talk directly to the student as if you are a teacher.
+The audience is business and finance undergraduate students.
 
-    Context:
-    {context}
+Explain your answers using step-by-step logic.
+Focus on guiding students through reasoning steps to grasp the principles behind the problems.
+Use markdown to make your Answers easier to follow by adding formatted section to your answer.
 
-    Question: {question}
-    Answer:"""
-)
+{style_instructions}
 
-# Build the chain
-qa_chain = RetrievalQA.from_chain_type(
-    llm=llm,
-    chain_type="stuff",
-    retriever=vectorstore.as_retriever(),
-    return_source_documents=True,
-    chain_type_kwargs={"prompt": prompt_template}
-)
+Context:
+{{context}}
+
+Question:
+{{question}}
+
+Answer:
+"""
+
+detail_prompt_templates: Dict[str, str] = {
+    "simple": base_template.format(style_instructions="""
+Write in simple, clear language.
+Avoid technical jargon.
+Use short sentences and plain words.
+"""),
+
+    "regular": base_template.format(style_instructions="""
+Use clear, academic language.
+Define any finance-specific terms.
+Answer with clarity and completeness.
+"""),
+
+    "in-depth": base_template.format(style_instructions="""
+Write with deep technical clarity, suitable for graduate students.
+Be detailed and thorough.
+Use sources whee necessary.
+""")
+}
+
+
+# Factory function to create a chain for a given detail level
+def get_qa_chain(detail_level: str = "regular") -> RetrievalQA:
+    template = detail_prompt_templates.get(detail_level, detail_prompt_templates["regular"])
+
+    prompt_template = PromptTemplate(
+        input_variables=["context", "question"],
+        template=template
+    )
+
+    return RetrievalQA.from_chain_type(
+        llm=llm,
+        chain_type="stuff",
+        retriever=vectorstore.as_retriever(),
+        return_source_documents=True,
+        chain_type_kwargs={"prompt": prompt_template}
+    )

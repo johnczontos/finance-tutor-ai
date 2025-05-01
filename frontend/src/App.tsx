@@ -11,8 +11,10 @@ function App() {
   const [messages, setMessages] = useState<ChatMessage[]>([]);
   const [sidebarOpen, setSidebarOpen] = useState(false);
   const [knowledgeCheckEnabled, setKnowledgeCheckEnabled] = useState(false);
+  const [detailLevel, setDetailLevel] = useState<'simple' | 'regular' | 'in-depth'>('regular');
   const [currentQuiz, setCurrentQuiz] = useState<KnowledgeCheckType | null>(null);
   const [quizLoading, setQuizLoading] = useState(false);
+  const [chatLoading, setChatLoading] = useState(false);
 
   const addMessage = (msg: ChatMessage) => {
     setMessages((prev) => [...prev, msg]);
@@ -20,14 +22,14 @@ function App() {
 
   const handleUserMessage = async (msg: ChatMessage) => {
     addMessage(msg);
-
     setCurrentQuiz(null);
-
+    setChatLoading(true);
+  
     try {
-      const result = await fetchAnswer(msg.content);
+      const result = await fetchAnswer(msg.content, detailLevel);
       const assistantMsg: ChatMessage = { role: 'assistant', content: result.answer };
       addMessage(assistantMsg);
-
+  
       if (knowledgeCheckEnabled) {
         setQuizLoading(true);
         const quizData = await generateKnowledgeCheck(msg.content);
@@ -37,8 +39,11 @@ function App() {
     } catch (err) {
       addMessage({ role: 'assistant', content: '⚠️ Something went wrong.' });
       setQuizLoading(false);
+    } finally {
+      setChatLoading(false);
     }
   };
+  
 
   const clearChat = () => {
     setMessages([]);
@@ -63,10 +68,12 @@ function App() {
         onClose={() => setSidebarOpen(false)}
         knowledgeCheckEnabled={knowledgeCheckEnabled}
         onToggleKnowledgeCheck={() => setKnowledgeCheckEnabled(prev => !prev)}
+        detailLevel={detailLevel}
+        onChangeDetailLevel={setDetailLevel}
       />
       <Header onToggleSidebar={() => setSidebarOpen(!sidebarOpen)} />
       <div className="flex-1 overflow-y-auto pt-2 flex flex-col">
-        <ChatWindow messages={messages} />
+        <ChatWindow messages={messages} loading={chatLoading} />
         <div className="transition-opacity duration-500" style={{ opacity: quizLoading ? 0.5 : 1 }}>
           {currentQuiz && <KnowledgeCheck quiz={currentQuiz} />}
         </div>

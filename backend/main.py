@@ -1,10 +1,8 @@
-# main.py
-
 from fastapi import FastAPI, HTTPException
 from fastapi.middleware.cors import CORSMiddleware
 from openai import OpenAI
 from pydantic import BaseModel
-from rag_chain import qa_chain
+from rag_chain import get_qa_chain  # updated import
 import openai
 import os
 import json
@@ -33,6 +31,7 @@ openai.api_key = os.getenv('OPENAI_API_KEY')
 # Request and response models
 class QueryRequest(BaseModel):
     query: str
+    detailLevel: str  # 'simple', 'regular', or 'in-depth'
 
 class QuizRequest(BaseModel):
     topic: str
@@ -47,13 +46,16 @@ class QuizResponse(BaseModel):
 @app.post("/ask")
 def ask_question(request: QueryRequest):
     try:
-        result = qa_chain(request.query)
+        chain = get_qa_chain(request.detailLevel)
+        result = chain(request.query)
         answer = result["result"]
         sources = [doc.metadata.get("source", "unknown") for doc in result["source_documents"]]
+
         return {
             "answer": answer,
             "sources": sources
         }
+
     except Exception as e:
         raise HTTPException(status_code=500, detail=str(e))
 
