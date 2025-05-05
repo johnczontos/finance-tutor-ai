@@ -1,0 +1,1142 @@
+[
+  {
+    "query": "What is the advantage of using Microsoft Excel for calculating NPV and IRR, as opposed to a financial calculator?",
+    "expected_url": "https://openstax.org/books/principles-finance/pages/16-6-using-excel-to-make-company-investment-decisions",
+    "expected_heading": "16.6   Using Excel to Make Company Investment Decisions"
+  },
+  {
+    "query": "Which type of financial statement analysis is Jamal likely to use to create a baseline estimate for his sales forecast for the first quarter of next year?",
+    "expected_url": "https://openstax.org/books/principles-finance/pages/",
+    "expected_heading": ""
+  },
+  {
+    "query": "In the process of creating a forecasted income statement, which type of costs are typically assumed to be directly linked to sales?",
+    "expected_url": "https://openstax.org/books/principles-finance/pages/5-years",
+    "expected_heading": "5 years"
+  },
+  {
+    "query": "Why might Sam, a finance major, find studying accounting concepts such as debits, credits, and accounts relevant to his field of study?",
+    "expected_url": "https://openstax.org/books/principles-finance/pages/4-5-what-is-\u201cprofit\u201d-versus-\u201closs\u201d-for-the-company?",
+    "expected_heading": "4.5   What Is \u201cProfit\u201d versus \u201cLoss\u201d for the Company?"
+  },
+  {
+    "query": "What is the median income for finance-related positions as of May 2020, according to the Bureau of Labor Statistics (BLS), and how does it compare to the overall median income?",
+    "expected_url": "https://openstax.org/books/principles-finance/pages/1-4-careers-in-finance",
+    "expected_heading": "1.4   Careers in Finance"
+  },
+  {
+    "query": "Why, according to Mark Twain, is it important to study the history of the US financial markets despite the risks associated with investing in the stock market?",
+    "expected_url": "https://openstax.org/books/principles-finance/pages/12-4-historical-picture-of-returns-to-stocks",
+    "expected_heading": "12.4   Historical Picture of Returns to Stocks"
+  },
+  {
+    "query": "What spreadsheet functions would you use to generate iterations that balance financial forecasts for a company like Clear Lake Sporting Goods, and how would you connect the balance sheet and income statement using appropriate formula referencing?",
+    "expected_url": "https://openstax.org/books/principles-finance/pages/18-6-using-excel-to-create-the-long-term-forecast",
+    "expected_heading": "18.6   Using Excel to Create the Long-Term Forecast"
+  },
+  {
+    "query": "What factors can impact the length of a financial forecast and what are some risks associated with using them?",
+    "expected_url": "https://openstax.org/books/principles-finance/pages/18-3-pro-forma-financials",
+    "expected_heading": "18.3   Pro Forma Financials"
+  },
+  {
+    "query": "What is the importance of macroeconomic variables in finance markets and how do financial decision makers use economic theory, empirical evidence, and accounting data to make informed decisions for their organization?",
+    "expected_url": "https://openstax.org/books/principles-finance/pages/1-6-microeconomic-and-macroeconomic-matters",
+    "expected_heading": "1.6   Microeconomic and Macroeconomic Matters"
+  },
+  {
+    "query": "What is the difference between stated and effective rates, and how can you calculate the true cost of borrowing?",
+    "expected_url": "https://openstax.org/books/principles-finance/pages/8-4-stated-versus-effective-rates",
+    "expected_heading": "8.4   Stated versus Effective Rates"
+  },
+  {
+    "query": "Given the financial data of a company, how would you calculate the P/E (price-to-earnings) ratio and P/B (price-to-book) ratio, and how would you use these ratios to determine whether the company is relatively undervalued or overvalued?",
+    "expected_url": "https://openstax.org/books/principles-finance/pages/11-1-multiple-approaches-to-stock-valuation",
+    "expected_heading": "11.1   Multiple Approaches to Stock Valuation"
+  },
+  {
+    "query": "What steps would you take to calculate an effective rate of interest using a financial calculator and Excel?",
+    "expected_url": "https://openstax.org/books/principles-finance/pages/8-5-equal-payments-with-a-financial-calculator-and-excel",
+    "expected_heading": "8.5   Equal Payments with a Financial Calculator and Excel"
+  },
+  {
+    "query": "What are some of the applications of statistical analysis in finance, both from a consumer and business perspective?",
+    "expected_url": "https://openstax.org/books/principles-finance/pages/13-7-the-r-statistical-analysis-tool",
+    "expected_heading": "13.7   The R Statistical Analysis Tool"
+  },
+  {
+    "query": "Why is forecasting financial statements important in finance, particularly in relation to future growth plans and cash flow needs?",
+    "expected_url": "https://openstax.org/books/principles-finance/pages/18-1-the-importance-of-forecasting",
+    "expected_heading": "18.1   The Importance of Forecasting"
+  },
+  {
+    "query": "What factors are considered when creating the most accurate sales forecast for a firm?",
+    "expected_url": "https://openstax.org/books/principles-finance/pages/18-2-forecasting-sales",
+    "expected_heading": "18.2   Forecasting Sales"
+  },
+  {
+    "query": "What are the interrelationships among historical data, the forecasted income statement, and the forecasted balance sheet used for in the context of financial statements?",
+    "expected_url": "https://openstax.org/books/principles-finance/pages/18-4-generating-the-complete-forecast",
+    "expected_heading": "18.4   Generating the Complete Forecast"
+  },
+  {
+    "query": "What is the importance of a cash forecast and how is it generated using data from income statement and balance sheet forecasts, company policies, and account relationships?",
+    "expected_url": "https://openstax.org/books/principles-finance/pages/18-5-forecasting-cash-flow-and-assessing-the-value-of-growth",
+    "expected_heading": "18.5   Forecasting Cash Flow and Assessing the Value of Growth"
+  },
+  {
+    "query": "What is the purpose and importance of the income statement, and how is EBITDA used as a measure of a company's profit?",
+    "expected_url": "https://openstax.org/books/principles-finance/pages/5-1-the-income-statement",
+    "expected_heading": "5.1   The Income Statement"
+  },
+  {
+    "query": "What are the four key financial statements used by accountants to communicate the financial performance and health of a firm, and how do they provide different insights into a firm's performance and financial health?",
+    "expected_url": "https://openstax.org/books/principles-finance/pages/5-8-reporting-financial-activity",
+    "expected_heading": "5.8   Reporting Financial Activity"
+  },
+  {
+    "query": "What is the purpose of issuing bonds for corporations, governments, or subagencies of governments, and what is expected from the borrowing party in return?",
+    "expected_url": "https://openstax.org/books/principles-finance/pages/10-5-using-spreadsheets-to-solve-bond-problems",
+    "expected_heading": "10.5   Using Spreadsheets to Solve Bond Problems"
+  },
+  {
+    "query": "What are some of the goals and needs of a personal accountant when performing financial analysis for your personal finances?",
+    "expected_url": "https://openstax.org/books/principles-finance/pages/6-6-profitability-ratios-and-the-dupont-method",
+    "expected_heading": "6.6   Profitability Ratios and the DuPont Method"
+  },
+  {
+    "query": "Explain how the increased use of leverage can lead to financial distress and how this possibility impacts a company's cost of capital. Additionally, discuss the trade-offs a firm might face as it increases its leverage and describe the concept of an optimal capital structure.",
+    "expected_url": "https://openstax.org/books/principles-finance/pages/17-5-optimal-capital-structure",
+    "expected_heading": "17.5   Optimal Capital Structure"
+  },
+  {
+    "query": "What is the key distinction between the income statement and the classified balance sheet in terms of the time frame they represent for a company's financial state?",
+    "expected_url": "https://openstax.org/books/principles-finance/pages/5-2-the-balance-sheet",
+    "expected_heading": "5.2   The Balance Sheet"
+  },
+  {
+    "query": "What are the three primary reasons that support the time value of money concept in finance?",
+    "expected_url": "https://openstax.org/books/principles-finance/pages/7-4-applications-of-tvm-in-finance",
+    "expected_heading": "7.4   Applications of TVM in Finance"
+  },
+  {
+    "query": "What are the assumptions and limitations of the Gordon growth model, and how does it relate to the dividend discount model (DDM)?",
+    "expected_url": "https://openstax.org/books/principles-finance/pages/11-2-dividend-discount-models-(ddms)",
+    "expected_heading": "11.2   Dividend Discount Models (DDMs)"
+  },
+  {
+    "query": "How do shares of common stock differ from bonds in terms of issuance, management, value calculation, and potential income generation for individual investors?",
+    "expected_url": "https://openstax.org/books/principles-finance/pages/11-5-efficient-markets",
+    "expected_heading": "11.5   Efficient Markets"
+  },
+  {
+    "query": "Based on the historical behavior of United States Treasury (sovereign) bonds, why are they often considered as one of the safest investments available?",
+    "expected_url": "https://openstax.org/books/principles-finance/pages/12-3-historical-picture-of-returns-to-bonds",
+    "expected_heading": "12.3   Historical Picture of Returns to Bonds"
+  },
+  {
+    "query": "What are the key characteristics of money market instruments and how do they differ from capital market instruments?",
+    "expected_url": "https://openstax.org/books/principles-finance/pages/1-7-financial-instruments",
+    "expected_heading": "1.7   Financial Instruments"
+  },
+  {
+    "query": "What is the Federal Reserve Economic Data (FRED) database, who maintains it, and what type of information does it contain?",
+    "expected_url": "https://openstax.org/books/principles-finance/pages/3-6-sources-and-characteristics-of-economic-data",
+    "expected_heading": "3.6   Sources and Characteristics of Economic Data"
+  },
+  {
+    "query": "What is the capital asset pricing model (CAPM) and how is it used to compute the required return of a security?",
+    "expected_url": "https://openstax.org/books/principles-finance/pages/15-3-the-capital-asset-pricing-model-(capm)",
+    "expected_heading": "15.3   The Capital Asset Pricing Model (CAPM)"
+  },
+  {
+    "query": "What are some strategies that company managers, such as those at American Airlines, might employ to maximize the value of their company?",
+    "expected_url": "https://openstax.org/books/principles-finance/pages/17-6-alternative-sources-of-funds",
+    "expected_heading": "17.6   Alternative Sources of Funds"
+  },
+  {
+    "query": "What is the Internal Rate of Return (IRR) and how is it calculated? Also, list some advantages and disadvantages of using the IRR method.",
+    "expected_url": "https://openstax.org/books/principles-finance/pages/16-3-internal-rate-of-return-(irr)-method",
+    "expected_heading": "16.3   Internal Rate of Return (IRR) Method"
+  },
+  {
+    "query": "What challenges might Bacon Signs face in terms of financial management as it transitions from the second to third generation of family ownership?",
+    "expected_url": "https://openstax.org/books/principles-finance/pages/1-8-concepts-of-time-and-value",
+    "expected_heading": "1.8   Concepts of Time and Value"
+  },
+  {
+    "query": "Describe a real-life situation where multiple payments of unequal value are present. How would you calculate the future and present value of this series of payments?",
+    "expected_url": "https://openstax.org/books/principles-finance/pages/9-1-timing-of-cash-flows",
+    "expected_heading": "9.1   Timing of Cash Flows"
+  },
+  {
+    "query": "Using technology, how would you calculate the slope and y-intercept for a linear regression model once a correlation has been deemed significant? Please explain the process in detail.",
+    "expected_url": "https://openstax.org/books/principles-finance/pages/14-3-best-fit-linear-model",
+    "expected_heading": "14.3   Best-Fit Linear Model"
+  },
+  {
+    "query": "What is the significance of net working capital and various liquidity ratios in ensuring that a business can pay its bills, and how do the cash conversion cycle and cash budget contribute to this process?",
+    "expected_url": "https://openstax.org/books/principles-finance/pages/19-1-what-is-working-capital?",
+    "expected_heading": "19.1   What Is Working Capital?"
+  },
+  {
+    "query": "What is trade credit and why is it important in B2B transactions? Discuss the roles of the creditor and debtor in managing trade credit.",
+    "expected_url": "https://openstax.org/books/principles-finance/pages/19-2-what-is-trade-credit?",
+    "expected_heading": "19.2   What Is Trade Credit?"
+  },
+  {
+    "query": "What is the purpose of cash management and how should excess cash be handled according to the document?",
+    "expected_url": "https://openstax.org/books/principles-finance/pages/19-3-cash-management",
+    "expected_heading": "19.3   Cash Management"
+  },
+  {
+    "query": "What tools are typically used by management to monitor accounts receivables and what is the significance of the age of the receivable in this context?",
+    "expected_url": "https://openstax.org/books/principles-finance/pages/19-4-receivables-management",
+    "expected_heading": "19.4   Receivables Management"
+  },
+  {
+    "query": "What are some of the management challenges presented by inventory as a current asset, and how does the Just-In-Time (JIT) method help to mitigate these challenges?",
+    "expected_url": "https://openstax.org/books/principles-finance/pages/19-5-inventory-management",
+    "expected_heading": "19.5   Inventory Management"
+  },
+  {
+    "query": "What is the purpose of a cash budget in the short-term planning of a business and how does it assist management in determining short-term financing needs?",
+    "expected_url": "https://openstax.org/books/principles-finance/pages/19-6-using-excel-to-create-the-short-term-plan",
+    "expected_heading": "19.6   Using Excel to Create the Short-Term Plan"
+  },
+  {
+    "query": "What is the difference between primary and secondary markets, and how do they relate to the sale of new and used cars?",
+    "expected_url": "https://openstax.org/books/principles-finance/pages/1-5-markets-and-participants",
+    "expected_heading": "1.5   Markets and Participants"
+  },
+  {
+    "query": "What is the connection between the balance sheet and the income statement, and why must the income statement be prepared first?",
+    "expected_url": "https://openstax.org/books/principles-finance/pages/5-3-the-relationship-between-the-balance-sheet-and-the-income-statement",
+    "expected_heading": "5.3   The Relationship between the Balance Sheet and the Income Statement"
+  },
+  {
+    "query": "Explain how the price of a bond is inversely related to its yield and provide an example to illustrate this relationship.",
+    "expected_url": "https://openstax.org/books/principles-finance/pages/10-1-characteristics-of-bonds",
+    "expected_heading": "10.1   Characteristics of Bonds"
+  },
+  {
+    "query": "What are Maria's short-term financial goals and why are they important for her future financial planning?",
+    "expected_url": "https://openstax.org/books/principles-finance/pages/15-5-using-excel-to-make-investment-decisions",
+    "expected_heading": "15.5   Using Excel to Make Investment Decisions"
+  },
+  {
+    "query": "What are the key differences between discount and premium bonds, and how do these differences impact the value or price of a bond?",
+    "expected_url": "https://openstax.org/books/principles-finance/pages/10-2-bond-valuation",
+    "expected_heading": "10.2   Bond Valuation"
+  },
+  {
+    "query": "What is the role of a controller in a for-profit business and how does knowledge of accounting aid in their job responsibilities?",
+    "expected_url": "https://openstax.org/books/principles-finance/pages/1-2-the-role-of-finance-in-an-organization",
+    "expected_heading": "1.2   The Role of Finance in an Organization"
+  },
+  {
+    "query": "How do changes in supply and demand impact the equilibrium price and quantity in the context of microeconomics?",
+    "expected_url": "https://openstax.org/books/principles-finance/pages/3-1-microeconomics",
+    "expected_heading": "3.1   Microeconomics"
+  },
+  {
+    "query": "What is the role of correlation and regression analysis in finance, and how is regression analysis used to calculate the beta coefficient of a stock?",
+    "expected_url": "https://openstax.org/books/principles-finance/pages/14-6-use-of-r-statistical-analysis-tool-for-regression-analysis",
+    "expected_heading": "14.6   Use of R Statistical Analysis Tool for Regression Analysis"
+  },
+  {
+    "query": "What are the key characteristics of the accrual-basis accounting method and for what types of businesses is it most appropriate?",
+    "expected_url": "https://openstax.org/books/principles-finance/pages/4-1-cash-versus-accrual-accounting",
+    "expected_heading": "4.1   Cash versus Accrual Accounting"
+  },
+  {
+    "query": "What are the different types of loans that can be loaned to businesses and how can they be tailored to the specific needs of the borrower?",
+    "expected_url": "https://openstax.org/books/principles-finance/pages/8-3-loan-amortization",
+    "expected_heading": "8.3   Loan Amortization"
+  },
+  {
+    "query": "What is the ongoing obligation of managers and employees in publicly traded companies towards the shareholders, and how does it relate to the company's long-term goals?",
+    "expected_url": "https://openstax.org/books/principles-finance/pages/2-6-companies-in-domestic-and-global-markets",
+    "expected_heading": "2.6   Companies in Domestic and Global Markets"
+  },
+  {
+    "query": "What are the key features of preferred stock and how does it differ from common stock?",
+    "expected_url": "https://openstax.org/books/principles-finance/pages/11-4-preferred-stock",
+    "expected_heading": "11.4   Preferred Stock"
+  },
+  {
+    "query": "What are the two major sources of capital appearing on a balance sheet, and why is there a cost of capital?",
+    "expected_url": "https://openstax.org/books/principles-finance/pages/17-1-the-concept-of-capital-structure",
+    "expected_heading": "17.1   The Concept of Capital Structure"
+  },
+  {
+    "query": "What is the concept of Time Value of Money (TVM) and why is money received now more valuable than the same amount received in the future?",
+    "expected_url": "https://openstax.org/books/principles-finance/pages/7-1-now-versus-later-concepts",
+    "expected_heading": "7.1   Now versus Later Concepts"
+  },
+  {
+    "query": "What does the term \"future value\" refer to and how does compounding affect it?",
+    "expected_url": "https://openstax.org/books/principles-finance/pages/7-2-time-value-of-money-(tvm)-basics",
+    "expected_heading": "7.2   Time Value of Money (TVM) Basics"
+  },
+  {
+    "query": "What is a timeline and how is it used in conceptualizing present value and future value problems in time value of money calculations?",
+    "expected_url": "https://openstax.org/books/principles-finance/pages/7-3-methods-for-solving-time-value-of-money-problems",
+    "expected_heading": "7.3   Methods for Solving Time Value of Money Problems"
+  },
+  {
+    "query": "Who are the stakeholders of a company and how does the management impact the operations and future of the company?",
+    "expected_url": "https://openstax.org/books/principles-finance/pages/2-2-relationship-between-shareholders-and-company-management",
+    "expected_heading": "2.2   Relationship between Shareholders and Company Management"
+  },
+  {
+    "query": "What is the term structure of interest rates and how can it be represented using the yield curve?",
+    "expected_url": "https://openstax.org/books/principles-finance/pages/10-3-using-the-yield-curve",
+    "expected_heading": "10.3   Using the Yield Curve"
+  },
+  {
+    "query": "What motive for holding cash led the management of Transcend Inc. to add another $30,000 to the target cash balance to account for potential unexpected repairs and unanticipated higher labor costs?",
+    "expected_url": "https://openstax.org/books/principles-finance/pages/30-percent-discount-if-cash-is-paid-on-the-sale-date-and-15%-discount-if-paid-3-days-after-the-invoice-date",
+    "expected_heading": "30 percent discount if cash is paid on the sale date and 15% discount if paid 3 days after the invoice date"
+  },
+  {
+    "query": "What is the difference between arithmetic mean, geometric mean, and weighted mean, and when is it more appropriate to use each one in analyzing a data set?",
+    "expected_url": "https://openstax.org/books/principles-finance/pages/13-1-measures-of-center",
+    "expected_heading": "13.1   Measures of Center"
+  },
+  {
+    "query": "What are the steps to analyze a regression using the method of least squares and residuals, and how do you test the assumptions for linear regression?",
+    "expected_url": "https://openstax.org/books/principles-finance/pages/14-2-linear-regression-analysis",
+    "expected_heading": "14.2   Linear Regression Analysis"
+  },
+  {
+    "query": "What is the Weighted Average Cost of Capital (WACC), and how can you calculate it given the weights in a company's capital structure and the costs of its different sources of capital?",
+    "expected_url": "https://openstax.org/books/principles-finance/pages/17-3-calculating-the-weighted-average-cost-of-capital",
+    "expected_heading": "17.3   Calculating the Weighted Average Cost of Capital"
+  },
+  {
+    "query": "What are agency costs, and how do they relate to conflicts of interest between board members, company management, and employees?",
+    "expected_url": "https://openstax.org/books/principles-finance/pages/2-4-agency-issues:-shareholders-and-corporate-boards",
+    "expected_heading": "2.4   Agency Issues: Shareholders and Corporate Boards"
+  },
+  {
+    "query": "What is operating cash flow and how is it calculated in the statement of cash flows?",
+    "expected_url": "https://openstax.org/books/principles-finance/pages/5-6-operating-cash-flow-and-free-cash-flow-to-the-firm-(fcff)",
+    "expected_heading": "5.6   Operating Cash Flow and Free Cash Flow to the Firm (FCFF)"
+  },
+  {
+    "query": "What does a small standard deviation indicate about the spread of data values in relation to the mean, and how does this differ when the standard deviation is larger?",
+    "expected_url": "https://openstax.org/books/principles-finance/pages/13-2-measures-of-spread",
+    "expected_heading": "13.2   Measures of Spread"
+  },
+  {
+    "query": "What is a z-score and how does it indicate the position of a data value in a data set?",
+    "expected_url": "https://openstax.org/books/principles-finance/pages/13-3-measures-of-position",
+    "expected_heading": "13.3   Measures of Position"
+  },
+  {
+    "query": "What are the two parameters of a normal distribution and how does an exponential distribution typically differ in its area of concern?",
+    "expected_url": "https://openstax.org/books/principles-finance/pages/13-4-statistical-distributions",
+    "expected_heading": "13.4   Statistical Distributions"
+  },
+  {
+    "query": "What is a probability distribution and how is it used in financial situations to determine the expected return on a particular investment or a portfolio of multiple investments?",
+    "expected_url": "https://openstax.org/books/principles-finance/pages/13-5-probability-distributions",
+    "expected_heading": "13.5   Probability Distributions"
+  },
+  {
+    "query": "What does univariate data refer to and what factors influence the type of graph used to visualize this data?",
+    "expected_url": "https://openstax.org/books/principles-finance/pages/13-6-data-visualization-and-graphical-displays",
+    "expected_heading": "13.6   Data Visualization and Graphical Displays"
+  },
+  {
+    "query": "What does a positive value of the correlation coefficient 'r' indicate about the relationship between two numeric variables?",
+    "expected_url": "https://openstax.org/books/principles-finance/pages/14-1-correlation-analysis",
+    "expected_heading": "14.1   Correlation Analysis"
+  },
+  {
+    "query": "What is the procedure for determining if there is a correlation between various stock market indices using regression analysis?",
+    "expected_url": "https://openstax.org/books/principles-finance/pages/14-4-regression-applications-in-finance",
+    "expected_heading": "14.4   Regression Applications in Finance"
+  },
+  {
+    "query": "What is the recommended method for generating predictions or forecasts using the linear regression model, and what is the general recommendation when predicting values for the dependent variable (y)?",
+    "expected_url": "https://openstax.org/books/principles-finance/pages/14-5-predictions-and-prediction-intervals",
+    "expected_heading": "14.5   Predictions and Prediction Intervals"
+  },
+  {
+    "query": "What are some ways in which ratios used in financial analysis can assist investors and analysts, and what are the limitations of such analysis?",
+    "expected_url": "https://openstax.org/books/principles-finance/pages/6-1-ratios:-condensing-information-into-smaller-pieces",
+    "expected_heading": "6.1   Ratios: Condensing Information into Smaller Pieces"
+  },
+  {
+    "query": "What are some common efficiency ratios used to measure how well management uses the assets of an organization to earn a profit?",
+    "expected_url": "https://openstax.org/books/principles-finance/pages/6-2-operating-efficiency-ratios",
+    "expected_heading": "6.2   Operating Efficiency Ratios"
+  },
+  {
+    "query": "What are the three common ratios used to measure an organization's liquidity and how do they differ in terms of the types of assets they include in their measures?",
+    "expected_url": "https://openstax.org/books/principles-finance/pages/6-3-liquidity-ratios",
+    "expected_heading": "6.3   Liquidity Ratios"
+  },
+  {
+    "query": "What are solvency ratios and what are two common examples of these ratios used to measure an organization's ability to meet its long-term obligations?",
+    "expected_url": "https://openstax.org/books/principles-finance/pages/6-4-solvency-ratios",
+    "expected_heading": "6.4   Solvency Ratios"
+  },
+  {
+    "query": "What are the three most commonly used market value ratios to assess the value of publicly traded firms?",
+    "expected_url": "https://openstax.org/books/principles-finance/pages/6-5-market-value-ratios",
+    "expected_heading": "6.5   Market Value Ratios"
+  },
+  {
+    "query": "What are the three broad areas of study in finance?",
+    "expected_url": "https://openstax.org/books/principles-finance/pages/1-1-what-is-finance?",
+    "expected_heading": "1.1   What Is Finance?"
+  },
+  {
+    "query": "How have technological advancements impacted a firm's ability to gather, evaluate, and store information, and how does this affect the firm's value for its stakeholders?",
+    "expected_url": "https://openstax.org/books/principles-finance/pages/1-3-importance-of-data-and-technology",
+    "expected_heading": "1.3   Importance of Data and Technology"
+  },
+  {
+    "query": "What is perpetuity and how is it valued in the context of time value of money?",
+    "expected_url": "https://openstax.org/books/principles-finance/pages/8-1-perpetuities",
+    "expected_heading": "8.1   Perpetuities"
+  },
+  {
+    "query": "What is the formula for calculating the Profitability Index (PI) and what are the inputs used in this calculation?",
+    "expected_url": "https://openstax.org/books/principles-finance/pages/16-4-alternative-methods",
+    "expected_heading": "16.4   Alternative Methods"
+  },
+  {
+    "query": "What are the three methods explained in the text for hedging against commodity price risk, and how does each method work?",
+    "expected_url": "https://openstax.org/books/principles-finance/pages/20-2-commodity-price-risk",
+    "expected_heading": "20.2   Commodity Price Risk"
+  },
+  {
+    "query": "What are the two key factors that investors are interested in when making an investment and how are these factors measured in finance?",
+    "expected_url": "https://openstax.org/books/principles-finance/pages/15-1-risk-and-return-to-an-individual-asset",
+    "expected_heading": "15.1   Risk and Return to an Individual Asset"
+  },
+  {
+    "query": "What does the standard deviation of the returns of a portfolio measure, and why is the risk of the portfolio lower than the weighted average of the risk of the individual securities?",
+    "expected_url": "https://openstax.org/books/principles-finance/pages/15-2-risk-and-return-to-multiple-assets",
+    "expected_heading": "15.2   Risk and Return to Multiple Assets"
+  },
+  {
+    "query": "What are the Sharpe ratio, Treynor ratio, and Jensen's alpha, and how do they help in measuring the success of a portfolio by considering both risk and return?",
+    "expected_url": "https://openstax.org/books/principles-finance/pages/15-4-applications-in-performance-measurement",
+    "expected_heading": "15.4   Applications in Performance Measurement"
+  },
+  {
+    "query": "What are the two main types of financial instruments focused on in the capital market and what are IPOs and SPACs used for in this context?",
+    "expected_url": "https://openstax.org/books/principles-finance/pages/12-1-overview-of-us-financial-markets",
+    "expected_heading": "12.1   Overview of US Financial Markets"
+  },
+  {
+    "query": "What is the most commonly quoted measure of inflation and how is it calculated?",
+    "expected_url": "https://openstax.org/books/principles-finance/pages/12-2-historical-picture-of-inflation",
+    "expected_heading": "12.2   Historical Picture of Inflation"
+  },
+  {
+    "query": "What does the quote by baseball legend Ted Williams imply about the expectations of business managers in making routine or unimportant decisions, and how does this contrast with the expectations for major capital investment decisions?",
+    "expected_url": "https://openstax.org/books/principles-finance/pages/9-2-unequal-payments-using-a-financial-calculator-or-microsoft-excel",
+    "expected_heading": "9.2   Unequal Payments Using a Financial Calculator or Microsoft Excel"
+  },
+  {
+    "query": "What is the purpose and importance of the statement of cash flows, and what are its key elements and structure?",
+    "expected_url": "https://openstax.org/books/principles-finance/pages/5-5-the-statement-of-cash-flows",
+    "expected_heading": "5.5   The Statement of Cash Flows"
+  },
+  {
+    "query": "What is the consumer price index commonly used to measure in the field of macroeconomics?",
+    "expected_url": "https://openstax.org/books/principles-finance/pages/3-2-macroeconomics",
+    "expected_heading": "3.2   Macroeconomics"
+  },
+  {
+    "query": "What are the four stages of the business cycle and what does each stage represent in terms of economic activity and real GDP?",
+    "expected_url": "https://openstax.org/books/principles-finance/pages/3-3-business-cycles-and-economic-activity",
+    "expected_heading": "3.3   Business Cycles and Economic Activity"
+  },
+  {
+    "query": "What is the formula to calculate the real rate of interest, and how does it relate to the nominal interest rate and the inflation rate?",
+    "expected_url": "https://openstax.org/books/principles-finance/pages/3-4-interest-rates",
+    "expected_heading": "3.4   Interest Rates"
+  },
+  {
+    "query": "What does it mean when we say a currency has appreciated in the context of foreign exchange rates?",
+    "expected_url": "https://openstax.org/books/principles-finance/pages/3-5-foreign-exchange-rates",
+    "expected_heading": "3.5   Foreign Exchange Rates"
+  },
+  {
+    "query": "What does the term \"double-entry accounting\" mean and how does it relate to the accounting equation?",
+    "expected_url": "https://openstax.org/books/principles-finance/pages/4-2-economic-basis-for-accrual-accounting",
+    "expected_heading": "4.2   Economic Basis for Accrual Accounting"
+  },
+  {
+    "query": "What are the two principles that guide the timing of recording revenues and expenses in accrival accounting, and what does each principle dictate?",
+    "expected_url": "https://openstax.org/books/principles-finance/pages/4-3-how-does-a-company-recognize-a-sale-and-an-expense?",
+    "expected_heading": "4.3   How Does a Company Recognize a Sale and an Expense?"
+  },
+  {
+    "query": "What determines whether an item is considered an expense or a capitalized fixed asset, and how is the cost of a fixed asset expensed over its useful life?",
+    "expected_url": "https://openstax.org/books/principles-finance/pages/4-4-when-should-a-company-capitalize-or-expense-an-item?",
+    "expected_heading": "4.4   When Should a Company Capitalize or Expense an Item?"
+  },
+  {
+    "query": "What are some of the risks associated with bonds as fixed-income investments and how do bond ratings assist potential investors in understanding these risks?",
+    "expected_url": "https://openstax.org/books/principles-finance/pages/10-4-risks-of-interest-rates-and-default",
+    "expected_heading": "10.4   Risks of Interest Rates and Default"
+  },
+  {
+    "query": "What are the two common methods for estimating the cost of equity capital as mentioned in the text and briefly explain how they differ from the yield to maturity on a company's outstanding bonds?",
+    "expected_url": "https://openstax.org/books/principles-finance/pages/17-2-the-costs-of-debt-and-equity-capital",
+    "expected_heading": "17.2   The Costs of Debt and Equity Capital"
+  },
+  {
+    "query": "What is the difference between an unlevered and a levered firm, and how does the use of debt potentially increase the value of a firm in the context of tax deductibility of interest expenses?",
+    "expected_url": "https://openstax.org/books/principles-finance/pages/17-4-capital-structure-choices",
+    "expected_heading": "17.4   Capital Structure Choices"
+  },
+  {
+    "query": "Define an annuity and distinguish between an ordinary annuity and an annuity due. How would you calculate the present value of these types of annuities and how might they be used in retirement planning?",
+    "expected_url": "https://openstax.org/books/principles-finance/pages/8-2-annuities",
+    "expected_heading": "8.2   Annuities"
+  },
+  {
+    "query": "What are the advantages and disadvantages of using the net present value method for calculating Sam's potential future earnings from purchasing the embroidery machine?",
+    "expected_url": "https://openstax.org/books/principles-finance/pages/16-2-net-present-value-(npv)-method",
+    "expected_heading": "16.2   Net Present Value (NPV) Method"
+  },
+  {
+    "query": "What role does a financial manager play in managing the risks of a company's cash inflows and outflows, and how does this impact the rate of return required by risk-averse investors?",
+    "expected_url": "https://openstax.org/books/principles-finance/pages/20-1-the-importance-of-risk-management",
+    "expected_heading": "20.1   The Importance of Risk Management"
+  },
+  {
+    "query": "What are the three types of risks associated with unpredictable exchange rates and how can companies use forward contracts and options to mitigate these risks?",
+    "expected_url": "https://openstax.org/books/principles-finance/pages/20-3-exchange-rates-and-risk",
+    "expected_heading": "20.3   Exchange Rates and Risk"
+  },
+  {
+    "query": "What happens to the present value of future cash flows when interest rates increase, and how is this related to the concept of duration in measuring interest rate risk?",
+    "expected_url": "https://openstax.org/books/principles-finance/pages/20-4-interest-rate-risk",
+    "expected_heading": "20.4   Interest Rate Risk"
+  },
+  {
+    "query": "What is the accounts receivable turnover ratio and how does it relate to operating efficiency ratios in finance?",
+    "expected_url": "https://openstax.org/books/principles-finance/pages/2014-winter-olympics-16-5-choosing-between-projects",
+    "expected_heading": "2014 Winter Olympics 16.5 Choosing between Projects"
+  },
+  {
+    "query": "What is a common-size income statement and how does it aid in assessing organizational performance?",
+    "expected_url": "https://openstax.org/books/principles-finance/pages/5-7-common-size-statements",
+    "expected_heading": "5.7   Common-Size Statements"
+  },
+  {
+    "query": "What are the common types of equity that a firm's statement of owner\u2019s equity is divided by, and what are some key transactions that impact these equities?",
+    "expected_url": "https://openstax.org/books/principles-finance/pages/5-4-the-statement-of-owner\u2019s-equity",
+    "expected_heading": "5.4   The Statement of Owner\u2019s Equity"
+  },
+  {
+    "query": "What are the four most common forms of business organizations and what factors might influence a business owner's decision to choose one over the others?",
+    "expected_url": "https://openstax.org/books/principles-finance/pages/2-1-business-structures",
+    "expected_heading": "2.1   Business Structures"
+  },
+  {
+    "query": "What are some of the responsibilities of a board of directors, and how do diversity and experience factor into their effectiveness in corporate governance?",
+    "expected_url": "https://openstax.org/books/principles-finance/pages/2-3-role-of-the-board-of-directors",
+    "expected_heading": "2.3   Role of the Board of Directors"
+  },
+  {
+    "query": "Why is effective, straightforward, and jargon-free communication critical to a company's investor relations and overall corporate governance strategy?",
+    "expected_url": "https://openstax.org/books/principles-finance/pages/2-5-interacting-with-investors,-intermediaries,-and-other-market-participants",
+    "expected_heading": "2.5   Interacting with Investors, Intermediaries, and Other Market Participants"
+  },
+  {
+    "query": "What is the limitation of using the payback period as a project evaluation method?",
+    "expected_url": "https://openstax.org/books/principles-finance/pages/16-1-payback-period-method",
+    "expected_heading": "16.1   Payback Period Method"
+  },
+  {
+    "query": "What is the profitability index and how does it help companies in choosing between differently sized projects that require varying amounts of resources?",
+    "expected_url": "https://openstax.org/books/principles-finance/pages/16-5-choosing-between-projects",
+    "expected_heading": "16.5   Choosing between Projects"
+  },
+  {
+    "query": "What is the DCF model typically used for and why is it more applicable for relatively young firms that do not pay dividends to their shareholders?",
+    "expected_url": "https://openstax.org/books/principles-finance/pages/11-3-discounted-cash-flow-(dcf)-model",
+    "expected_heading": "11.3   Discounted Cash Flow (DCF) Model"
+  },
+  {
+    "query": "Imagine you are a financial analyst and you have been given a project with certain assumptions and numbers. After calculating the NPV and IRR using Excel, there is a sudden change in the project assumptions. Explain how you would use Excel to update these calculations and discuss the advantages of using Excel for this task compared to a financial calculator.",
+    "expected_url": "https://openstax.org/books/principles-finance/pages/16-6-using-excel-to-make-company-investment-decisions",
+    "expected_heading": "16.6   Using Excel to Make Company Investment Decisions"
+  },
+  {
+    "query": "Jamal is forecasting sales for the first quarter of next year and assumes that sales will likely grow by 3%. Explain how Jamal can use trend analysis, common-size analysis, and ratio analysis to support or adjust his assumption.",
+    "expected_url": "https://openstax.org/books/principles-finance/pages/",
+    "expected_heading": ""
+  },
+  {
+    "query": "Based on the information provided, explain how Amelia could use a formula in Excel to estimate her utilities expense for each month. What type of cost would this represent in a forecasted income statement and why?",
+    "expected_url": "https://openstax.org/books/principles-finance/pages/5-years",
+    "expected_heading": "5 years"
+  },
+  {
+    "query": "Explain the concept of net income in the context of a business operation. How does the balance between revenues and expenses affect the net income and overall value of a business? Provide an example to illustrate your explanation.",
+    "expected_url": "https://openstax.org/books/principles-finance/pages/4-5-what-is-\u201cprofit\u201d-versus-\u201closs\u201d-for-the-company?",
+    "expected_heading": "4.5   What Is \u201cProfit\u201d versus \u201cLoss\u201d for the Company?"
+  },
+  {
+    "query": "Explain the importance of internal financial analysts in a firm or organization, and discuss how their diverse set of business and communication skills can contribute to the success of the firm. Include examples of daily tasks they might perform.",
+    "expected_url": "https://openstax.org/books/principles-finance/pages/1-4-careers-in-finance",
+    "expected_heading": "1.4   Careers in Finance"
+  },
+  {
+    "query": "Compare and contrast the behavior of the Dow Jones Industrial Average (DJIA) and the S&P 500 Index over a historical period of your choice. Use graphs and charts to support your comparison and explain any differences or similarities in their performance results.",
+    "expected_url": "https://openstax.org/books/principles-finance/pages/12-4-historical-picture-of-returns-to-stocks",
+    "expected_heading": "12.4   Historical Picture of Returns to Stocks"
+  },
+  {
+    "query": "Clear Lake Sporting Goods has provided their forecasted financial statements and cash flow. Explain the process of generating these forecasts using spreadsheet tools, and describe how you would use spreadsheet functions to ensure these financial forecasts are balanced. Include in your explanation how to connect the balance sheet and income statement using appropriate formula referencing.",
+    "expected_url": "https://openstax.org/books/principles-finance/pages/18-6-using-excel-to-create-the-long-term-forecast",
+    "expected_heading": "18.6   Using Excel to Create the Long-Term Forecast"
+  },
+  {
+    "query": "Explain the risks associated with using financial forecasts and describe how these risks can impact the length and timeline of a forecast. Provide an example to illustrate your explanation.",
+    "expected_url": "https://openstax.org/books/principles-finance/pages/18-3-pro-forma-financials",
+    "expected_heading": "18.3   Pro Forma Financials"
+  },
+  {
+    "query": "Explain the importance of macroeconomic variables in financial markets and discuss how these variables can impact financial forecasting for individual firms and industries. Provide an example to illustrate your point.",
+    "expected_url": "https://openstax.org/books/principles-finance/pages/1-6-microeconomic-and-macroeconomic-matters",
+    "expected_heading": "1.6   Microeconomic and Macroeconomic Matters"
+  },
+  {
+    "query": "Explain the difference between stated and effective annual interest rates using an example. Discuss the impact of compounding more than once per year on the true annual rate.",
+    "expected_url": "https://openstax.org/books/principles-finance/pages/8-4-stated-versus-effective-rates",
+    "expected_heading": "8.4   Stated versus Effective Rates"
+  },
+  {
+    "query": "Given the financial data of two companies, calculate their P/E (price-to-earnings) and P/B (price-to-book) ratios. Based on your calculations, determine which company is relatively undervalued or overvalued. Additionally, explain how alternative valuation multipliers like P/S (price-to-sales) ratio and P/CF (price-to-cash-flow) could potentially alter your assessment.",
+    "expected_url": "https://openstax.org/books/principles-finance/pages/11-1-multiple-approaches-to-stock-valuation",
+    "expected_heading": "11.1   Multiple Approaches to Stock Valuation"
+  },
+  {
+    "query": "Explain the process and benefits of assigning a name to a cell in Excel, using the example of cell B3 being named \"rate\" for effective rate calculations. How would this affect the use of formulas in Excel?",
+    "expected_url": "https://openstax.org/books/principles-finance/pages/8-5-equal-payments-with-a-financial-calculator-and-excel",
+    "expected_heading": "8.5   Equal Payments with a Financial Calculator and Excel"
+  },
+  {
+    "query": "Provide an example of a financial decision you might make as a consumer. Explain how statistical analysis could guide this decision, and what potential outcomes could be predicted based on different statistical outcomes.",
+    "expected_url": "https://openstax.org/books/principles-finance/pages/13-7-the-r-statistical-analysis-tool",
+    "expected_heading": "13.7   The R Statistical Analysis Tool"
+  },
+  {
+    "query": "Explain how Clear Lake Sporting Goods could use each of the three financial statements mentioned (balance sheet, income statement, and statement of cash flows) to manage its cash flow, understand its profitability, and communicate its financial position to outside parties. Provide specific examples for each statement.",
+    "expected_url": "https://openstax.org/books/principles-finance/pages/18-1-the-importance-of-forecasting",
+    "expected_heading": "18.1   The Importance of Forecasting"
+  },
+  {
+    "query": "Explain the advantages and disadvantages of using past sales growth averages to forecast future financial performance, and justify when it might be necessary to adjust these relationships. Provide a real-world example to support your explanation.",
+    "expected_url": "https://openstax.org/books/principles-finance/pages/18-2-forecasting-sales",
+    "expected_heading": "18.2   Forecasting Sales"
+  },
+  {
+    "query": "Based on the information provided, explain how potential future legislation might impact the cost of goods sold and how this should be factored into forecasting the income statement. Discuss the implications of increasing the cost of goods sold by 2% in the last quarter of the year.",
+    "expected_url": "https://openstax.org/books/principles-finance/pages/18-4-generating-the-complete-forecast",
+    "expected_heading": "18.4   Generating the Complete Forecast"
+  },
+  {
+    "query": "Based on the information provided, explain how a company can manage its cash flow effectively, particularly during months when a deficit is forecasted. Discuss the role of short-term financing in this process and how it can be used to maintain a healthy cash balance.",
+    "expected_url": "https://openstax.org/books/principles-finance/pages/18-5-forecasting-cash-flow-and-assessing-the-value-of-growth",
+    "expected_heading": "18.5   Forecasting Cash Flow and Assessing the Value of Growth"
+  },
+  {
+    "query": "Explain the functionality of the income statement and discuss the use of EBITDA as a measure of a company's profit. How does the income statement relate to other financial statements in terms of the flow of financial information?",
+    "expected_url": "https://openstax.org/books/principles-finance/pages/5-1-the-income-statement",
+    "expected_heading": "5.1   The Income Statement"
+  },
+  {
+    "query": "As a potential investor, how would you use the information found in the MD&A report, risk factors, financial statements, and disclosures about market risk to make an informed investment decision about Apple? Please provide specific examples from each of these key elements.",
+    "expected_url": "https://openstax.org/books/principles-finance/pages/5-8-reporting-financial-activity",
+    "expected_heading": "5.8   Reporting Financial Activity"
+  },
+  {
+    "query": "Explain how the process of purchasing a bond is similar to making a loan. Discuss the roles of the investor and the bond issuer, and how this transaction benefits both parties.",
+    "expected_url": "https://openstax.org/books/principles-finance/pages/10-5-using-spreadsheets-to-solve-bond-problems",
+    "expected_heading": "10.5   Using Spreadsheets to Solve Bond Problems"
+  },
+  {
+    "query": "Explain how the goals and needs of a personal accountant in performing financial analysis might differ from those of a corporate accountant. Provide examples of the different tactics each might use to ensure validity, accurate data, and compliance in reporting.",
+    "expected_url": "https://openstax.org/books/principles-finance/pages/6-6-profitability-ratios-and-the-dupont-method",
+    "expected_heading": "6.6   Profitability Ratios and the DuPont Method"
+  },
+  {
+    "query": "Explain the concept of optimal debt level and its role in determining a company's target capital structure. Discuss how market values influence the costs of capital and the weights in the capital structure, and how these factors might affect the determination of the optimal capital structure.",
+    "expected_url": "https://openstax.org/books/principles-finance/pages/17-5-optimal-capital-structure",
+    "expected_heading": "17.5   Optimal Capital Structure"
+  },
+  {
+    "query": "Compare and contrast the income statement and the classified balance sheet. In your response, be sure to explain the key distinction between the two and the importance of each in understanding a company's financial state.",
+    "expected_url": "https://openstax.org/books/principles-finance/pages/5-2-the-balance-sheet",
+    "expected_heading": "5.2   The Balance Sheet"
+  },
+  {
+    "query": "Explain the concept of Time Value of Money (TVM) and discuss how it influences the decision-making process of savers and investors. Provide a practical example to illustrate your point.",
+    "expected_url": "https://openstax.org/books/principles-finance/pages/7-4-applications-of-tvm-in-finance",
+    "expected_heading": "7.4   Applications of TVM in Finance"
+  },
+  {
+    "query": "Compare and contrast the constant growth DDM and the Gordon growth model. In your answer, discuss the assumptions and limitations of each model, and explain how they can be used to value a stock.",
+    "expected_url": "https://openstax.org/books/principles-finance/pages/11-2-dividend-discount-models-(ddms)",
+    "expected_heading": "11.2   Dividend Discount Models (DDMs)"
+  },
+  {
+    "query": "Compare and contrast operational efficiency and informational efficiency in financial markets, providing examples of each. Additionally, discuss the implications of these efficiencies on the behavior of traders and the overall market performance.",
+    "expected_url": "https://openstax.org/books/principles-finance/pages/11-5-efficient-markets",
+    "expected_heading": "11.5   Efficient Markets"
+  },
+  {
+    "query": "Compare and contrast the behavior of sovereign (government) bonds and corporate bonds over various historical periods. Use specific examples from plots and charts to support your analysis.",
+    "expected_url": "https://openstax.org/books/principles-finance/pages/12-3-historical-picture-of-returns-to-bonds",
+    "expected_heading": "12.3   Historical Picture of Returns to Bonds"
+  },
+  {
+    "query": "Explain how commercial paper functions as a short-term financing tool for corporations and financial institutions. Provide an example, such as the one mentioned in the document about credit card companies, to illustrate your point.",
+    "expected_url": "https://openstax.org/books/principles-finance/pages/1-7-financial-instruments",
+    "expected_heading": "1.7   Financial Instruments"
+  },
+  {
+    "query": "Using the Federal Reserve Economic Data (FRED) database, select a specific economic variable and compute its percent change over a given period. Then, interpret the significance of this change in the context of the broader economy.",
+    "expected_url": "https://openstax.org/books/principles-finance/pages/3-6-sources-and-characteristics-of-economic-data",
+    "expected_heading": "3.6   Sources and Characteristics of Economic Data"
+  },
+  {
+    "query": "Explain why lending money to the US government is considered a risk-free investment and discuss how this could be a suitable strategy for someone saving for law school tuition.",
+    "expected_url": "https://openstax.org/books/principles-finance/pages/15-3-the-capital-asset-pricing-model-(capm)",
+    "expected_heading": "15.3   The Capital Asset Pricing Model (CAPM)"
+  },
+  {
+    "query": "Explain how the concept of maximizing the value of a company, as illustrated by the example of American Airlines, could be applied to a different industry, such as the restaurant industry. Discuss the specific strategies that managers in this industry might use to attract customers and keep costs low.",
+    "expected_url": "https://openstax.org/books/principles-finance/pages/17-6-alternative-sources-of-funds",
+    "expected_heading": "17.6   Alternative Sources of Funds"
+  },
+  {
+    "query": "Sam's Sporting Goods is considering purchasing an embroidery machine. The machine costs $10,000 and is expected to generate cash inflows of $2,500 per year for the next 5 years. Using the internal rate of return (IRR) method, determine whether Sam's Sporting Goods should purchase the machine. In your response, explain your calculations, the advantages and disadvantages of using the IRR method in this scenario, and any assumptions you made.",
+    "expected_url": "https://openstax.org/books/principles-finance/pages/16-3-internal-rate-of-return-(irr)-method",
+    "expected_heading": "16.3   Internal Rate of Return (IRR) Method"
+  },
+  {
+    "query": "Based on the case of Bacon Signs, explain the factors a company should consider when deciding between borrowing money to expand the business or delaying new investment to pay dividends to the owners. How might the performance of the Dow Jones Industrial Average influence this decision?",
+    "expected_url": "https://openstax.org/books/principles-finance/pages/1-8-concepts-of-time-and-value",
+    "expected_heading": "1.8   Concepts of Time and Value"
+  },
+  {
+    "query": "Explain the concept of a mixed stream in the context of investments. How does the introduction of a large bonus in the fifth year complicate the calculations related to time value of money? Provide an example to illustrate your explanation.",
+    "expected_url": "https://openstax.org/books/principles-finance/pages/9-1-timing-of-cash-flows",
+    "expected_heading": "9.1   Timing of Cash Flows"
+  },
+  {
+    "query": "You have conducted a correlation analysis and found a significant correlation. You then proceed to develop a best-fit linear regression model. Explain how you would use technology to calculate the slope and y-intercept for this model, and discuss how you would interpret and apply these values in the context of your analysis.",
+    "expected_url": "https://openstax.org/books/principles-finance/pages/14-3-best-fit-linear-model",
+    "expected_heading": "14.3   Best-Fit Linear Model"
+  },
+  {
+    "query": "Explain the concept of the cash conversion cycle and its importance in managing working capital. How does it interact with liquidity ratios in ensuring that a business can meet its financial obligations?",
+    "expected_url": "https://openstax.org/books/principles-finance/pages/19-1-what-is-working-capital?",
+    "expected_heading": "19.1   What Is Working Capital?"
+  },
+  {
+    "query": "Explain how the integration of a company's purchasing system with other functions such as production planning and sales forecasting can impact the negotiation of order quantities and preparation of purchase orders. Additionally, discuss the role of trade credit accounts in this process.",
+    "expected_url": "https://openstax.org/books/principles-finance/pages/19-2-what-is-trade-credit?",
+    "expected_heading": "19.2   What Is Trade Credit?"
+  },
+  {
+    "query": "Explain the concept of cash management in a firm. Discuss the role of a cash budget in this process and why a financial manager might choose to invest cash balances. Provide an example to illustrate your points.",
+    "expected_url": "https://openstax.org/books/principles-finance/pages/19-3-cash-management",
+    "expected_heading": "19.3   Cash Management"
+  },
+  {
+    "query": "Explain how credit terms can impact a company's sales and financial management goals. Provide an example of a situation where a company might change its credit terms based on its marketing strategies and financial management goals.",
+    "expected_url": "https://openstax.org/books/principles-finance/pages/19-4-receivables-management",
+    "expected_heading": "19.4   Receivables Management"
+  },
+  {
+    "query": "Explain the relationship between carrying costs and ordering costs in inventory management. How do these costs impact a company's decision on the quantity and frequency of inventory orders? Include in your discussion the potential implications of stockout costs.",
+    "expected_url": "https://openstax.org/books/principles-finance/pages/19-5-inventory-management",
+    "expected_heading": "19.5   Inventory Management"
+  },
+  {
+    "query": "How can the concept of financial resiliency be applied to small businesses during unexpected economic downturns like the COVID-19 pandemic? Discuss the strategies a small business could employ to maintain financial resiliency.",
+    "expected_url": "https://openstax.org/books/principles-finance/pages/19-6-using-excel-to-create-the-short-term-plan",
+    "expected_heading": "19.6   Using Excel to Create the Short-Term Plan"
+  },
+  {
+    "query": "Compare and contrast the roles and compensation models of dealers and brokers in the financial market. Provide examples of potential conflicts of interest a dealer might face and how these are disclosed to investors.",
+    "expected_url": "https://openstax.org/books/principles-finance/pages/1-5-markets-and-participants",
+    "expected_heading": "1.5   Markets and Participants"
+  },
+  {
+    "query": "Explain the process of closing temporary accounts during the period close process. How does this process contribute to determining whether a company has a net profit or net loss, and how does it affect the retained earnings account?",
+    "expected_url": "https://openstax.org/books/principles-finance/pages/5-3-the-relationship-between-the-balance-sheet-and-the-income-statement",
+    "expected_heading": "5.3   The Relationship between the Balance Sheet and the Income Statement"
+  },
+  {
+    "query": "Explain how bonds are considered a form of fixed-income securities and discuss the implications of this for both the issuer and the purchaser. Include in your discussion the unique terminology associated with bonds.",
+    "expected_url": "https://openstax.org/books/principles-finance/pages/10-1-characteristics-of-bonds",
+    "expected_heading": "10.1   Characteristics of Bonds"
+  },
+  {
+    "query": "Based on the data provided, explain the concept of volatility in relation to the average monthly return of AMZN. How does the standard deviation of 9.33% reflect the risk associated with investing in AMZN?",
+    "expected_url": "https://openstax.org/books/principles-finance/pages/15-5-using-excel-to-make-investment-decisions",
+    "expected_heading": "15.5   Using Excel to Make Investment Decisions"
+  },
+  {
+    "query": "Explain the process of pricing a bond, differentiating between discount and premium bonds, and fixed-rate and variable-rate bonds. Also, illustrate with a timeline indicating bond cash flows and explain how bond yields are determined.",
+    "expected_url": "https://openstax.org/books/principles-finance/pages/10-2-bond-valuation",
+    "expected_heading": "10.2   Bond Valuation"
+  },
+  {
+    "query": "Compare and contrast the role of a comptroller or controller within a for-profit business to the overall finance function within an organization. How does their knowledge of accounting contribute to the effectiveness of the finance function?",
+    "expected_url": "https://openstax.org/books/principles-finance/pages/1-2-the-role-of-finance-in-an-organization",
+    "expected_heading": "1.2   The Role of Finance in an Organization"
+  },
+  {
+    "query": "Imagine a scenario where there is a sudden increase in the demand for a certain product, but the supply remains constant. Explain how this change in demand will impact the equilibrium price and quantity of the product. Additionally, discuss how the situation would differ if instead the supply increased but the demand remained constant.",
+    "expected_url": "https://openstax.org/books/principles-finance/pages/3-1-microeconomics",
+    "expected_heading": "3.1   Microeconomics"
+  },
+  {
+    "query": "Explain how regression analysis can be used in portfolio diversification, specifically in establishing a relationship between a dependent variable and an independent variable. Provide an example scenario where this might be applied.",
+    "expected_url": "https://openstax.org/books/principles-finance/pages/14-6-use-of-r-statistical-analysis-tool-for-regression-analysis",
+    "expected_heading": "14.6   Use of R Statistical Analysis Tool for Regression Analysis"
+  },
+  {
+    "query": "Compare and contrast the cash-basis accounting method and the accrual-basis accounting method. Provide examples of types of businesses that would be more likely to use each method and explain why they would be more appropriate.",
+    "expected_url": "https://openstax.org/books/principles-finance/pages/4-1-cash-versus-accrual-accounting",
+    "expected_heading": "4.1   Cash versus Accrual Accounting"
+  },
+  {
+    "query": "Explain the difference between a revolving credit facility and a personal loan, and discuss why a company might choose to use a revolver instead of a personal loan for short-term needs. Include in your answer the role of collateral and the borrower's creditworthiness.",
+    "expected_url": "https://openstax.org/books/principles-finance/pages/8-3-loan-amortization",
+    "expected_heading": "8.3   Loan Amortization"
+  },
+  {
+    "query": "Explain the concept of stock price maximization and how it leads to maximizing shareholder wealth. In your explanation, discuss the role of present and future cash flows in determining the value of an asset, particularly a stock.",
+    "expected_url": "https://openstax.org/books/principles-finance/pages/2-6-companies-in-domestic-and-global-markets",
+    "expected_heading": "2.6   Companies in Domestic and Global Markets"
+  },
+  {
+    "query": "Explain the key differences between common stock and preferred stock. Then, using a hypothetical company, calculate the intrinsic value of its preferred stock.",
+    "expected_url": "https://openstax.org/books/principles-finance/pages/11-4-preferred-stock",
+    "expected_heading": "11.4   Preferred Stock"
+  },
+  {
+    "query": "Explain how a company might decide between financing their assets through debt or equity. Discuss the potential advantages and disadvantages of each approach.",
+    "expected_url": "https://openstax.org/books/principles-finance/pages/17-1-the-concept-of-capital-structure",
+    "expected_heading": "17.1   The Concept of Capital Structure"
+  },
+  {
+    "query": "Explain the relationship between time, interest rate, and the growth of an investment, as well as how these factors contribute to the concept of future value. Provide an example to illustrate your explanation.",
+    "expected_url": "https://openstax.org/books/principles-finance/pages/7-1-now-versus-later-concepts",
+    "expected_heading": "7.1   Now versus Later Concepts"
+  },
+  {
+    "query": "Explain the concept of compound interest with an example. How does it differ from simple interest and what is the significance of the additional $1.60 earned in the second year in the given context?",
+    "expected_url": "https://openstax.org/books/principles-finance/pages/7-2-time-value-of-money-(tvm)-basics",
+    "expected_heading": "7.2   Time Value of Money (TVM) Basics"
+  },
+  {
+    "query": "You are given a financial calculator and Excel. Using these tools, provide a step-by-step explanation of how you would calculate the future value of an investment using a specified growth rate over a certain period of time. Include in your explanation the method you would use to calculate the discount rate.",
+    "expected_url": "https://openstax.org/books/principles-finance/pages/7-3-methods-for-solving-time-value-of-money-problems",
+    "expected_heading": "7.3   Methods for Solving Time Value of Money Problems"
+  },
+  {
+    "query": "Explain how the relationship between principals and agents can impact the operations and future of a company. Include in your answer the potential effects on various stakeholders such as employees, customers, shareholders, suppliers, communities, and governments.",
+    "expected_url": "https://openstax.org/books/principles-finance/pages/2-2-relationship-between-shareholders-and-company-management",
+    "expected_heading": "2.2   Relationship between Shareholders and Company Management"
+  },
+  {
+    "query": "Explain how changes in the shape of the yield curve can impact the term structure of interest rates. Provide an example of a scenario where this might occur and discuss the potential implications for investors.",
+    "expected_url": "https://openstax.org/books/principles-finance/pages/10-3-using-the-yield-curve",
+    "expected_heading": "10.3   Using the Yield Curve"
+  },
+  {
+    "query": "Based on the information provided about Jackson\u2019s Moonshine LLC's receivables collection period of 47 days, what potential implications could this have on the company's liquidity and overall financial health? Please explain your reasoning and suggest possible strategies for improvement.",
+    "expected_url": "https://openstax.org/books/principles-finance/pages/30-percent-discount-if-cash-is-paid-on-the-sale-date-and-15%-discount-if-paid-3-days-after-the-invoice-date",
+    "expected_heading": "30 percent discount if cash is paid on the sale date and 15% discount if paid 3 days after the invoice date"
+  },
+  {
+    "query": "Explain why the median is generally a better measure of the average when there are extreme values or outliers in the data set, and provide an example using a hypothetical set of portfolio values.",
+    "expected_url": "https://openstax.org/books/principles-finance/pages/13-1-measures-of-center",
+    "expected_heading": "13.1   Measures of Center"
+  },
+  {
+    "query": "Explain the method of least squares used in linear regression analysis and discuss how it contributes to determining the parameters of the model, specifically the slope and y-intercept of the best-fit line. Additionally, provide an example of how this model can be used to predict the value of a dependent variable.",
+    "expected_url": "https://openstax.org/books/principles-finance/pages/14-2-linear-regression-analysis",
+    "expected_heading": "14.2   Linear Regression Analysis"
+  },
+  {
+    "query": "A company has a capital structure that consists of 40% debt, 20% preferred stock, and 40% common equity. The after-tax cost of debt is 5%, the cost of preferred stock capital is 7%, and the cost of common stock capital is 10%. Calculate the company's Weighted Average Cost of Capital (WACC) and explain how changes in the company's capital structure could impact the WACC.",
+    "expected_url": "https://openstax.org/books/principles-finance/pages/17-3-calculating-the-weighted-average-cost-of-capital",
+    "expected_heading": "17.3   Calculating the Weighted Average Cost of Capital"
+  },
+  {
+    "query": "Based on the Enron case study, explain the role and responsibilities of a company's directors in protecting investor interests. Discuss how their failure in carrying out these duties can lead to significant financial losses and potentially illegal activities within the company.",
+    "expected_url": "https://openstax.org/books/principles-finance/pages/2-4-agency-issues:-shareholders-and-corporate-boards",
+    "expected_heading": "2.4   Agency Issues: Shareholders and Corporate Boards"
+  },
+  {
+    "query": "Explain the significance of operating cash flow in assessing an organization's cash management performance and describe the process of how it is calculated using the statement of cash flows.",
+    "expected_url": "https://openstax.org/books/principles-finance/pages/5-6-operating-cash-flow-and-free-cash-flow-to-the-firm-(fcff)",
+    "expected_heading": "5.6   Operating Cash Flow and Free Cash Flow to the Firm (FCFF)"
+  },
+  {
+    "query": "Explain how the standard deviation can be used in investment decision-making, specifically in terms of assessing the risk associated with a particular investment. Provide an example to illustrate your explanation.",
+    "expected_url": "https://openstax.org/books/principles-finance/pages/13-2-measures-of-spread",
+    "expected_heading": "13.2   Measures of Spread"
+  },
+  {
+    "query": "Explain how the z-score, quartiles, and percentiles are used as measures of position in a data set. Compare their uses and provide an example of a situation where one might be more useful than the others.",
+    "expected_url": "https://openstax.org/books/principles-finance/pages/13-3-measures-of-position",
+    "expected_heading": "13.3   Measures of Position"
+  },
+  {
+    "query": "Based on the given intervals for portfolio values, explain how you would create a frequency distribution table. What information can you infer from this table about the distribution of portfolio values among the 20 clients at the brokerage firm?",
+    "expected_url": "https://openstax.org/books/principles-finance/pages/13-4-statistical-distributions",
+    "expected_heading": "13.4   Statistical Distributions"
+  },
+  {
+    "query": "An investor approaching retirement age wishes to shift their assets. How would they calculate the portfolio weights to ensure they are meeting allocation metrics? Explain the process and the importance of the expected values and normal distribution in this context.",
+    "expected_url": "https://openstax.org/books/principles-finance/pages/13-5-probability-distributions",
+    "expected_heading": "13.5   Probability Distributions"
+  },
+  {
+    "query": "Describe a scenario where you would use a specific type of graph to visualize univariate data. Explain why you chose that type of graph and how it helps to interpret patterns and trends in the data.",
+    "expected_url": "https://openstax.org/books/principles-finance/pages/13-6-data-visualization-and-graphical-displays",
+    "expected_heading": "13.6   Data Visualization and Graphical Displays"
+  },
+  {
+    "query": "Provide a real-world example of a financial scenario where a negative correlation between an independent and dependent variable might exist. Explain why this correlation might occur and how it could impact financial decision making.",
+    "expected_url": "https://openstax.org/books/principles-finance/pages/14-1-correlation-analysis",
+    "expected_heading": "14.1   Correlation Analysis"
+  },
+  {
+    "query": "Explain how regression analysis can be used to determine the correlation between the S&P 500 and the DJIA. What steps would you take, what results would indicate a significant correlation, and how could this information be used to generate a linear model?",
+    "expected_url": "https://openstax.org/books/principles-finance/pages/14-4-regression-applications-in-finance",
+    "expected_heading": "14.4   Regression Applications in Finance"
+  },
+  {
+    "query": "Explain the process of generating predictions for the dependent variable using the linear regression model, and describe how to generate prediction intervals based on these predictions. Discuss the importance of significant correlation in this process.",
+    "expected_url": "https://openstax.org/books/principles-finance/pages/14-5-predictions-and-prediction-intervals",
+    "expected_heading": "14.5   Predictions and Prediction Intervals"
+  },
+  {
+    "query": "Describe a scenario where a company might make a poor investment decision if it only relies on financial statement analysis, without considering the industry context and competitor data. Explain why this could lead to a misinformed decision.",
+    "expected_url": "https://openstax.org/books/principles-finance/pages/6-1-ratios:-condensing-information-into-smaller-pieces",
+    "expected_heading": "6.1   Ratios: Condensing Information into Smaller Pieces"
+  },
+  {
+    "query": "Compare and contrast the four efficiency ratios: accounts receivable turnover, total asset turnover, inventory turnover, and days\u2019 sales in inventory. Provide an example of how each ratio can be used to assess the financial health of a company like Clear Lake Sporting Goods.",
+    "expected_url": "https://openstax.org/books/principles-finance/pages/6-2-operating-efficiency-ratios",
+    "expected_heading": "6.2   Operating Efficiency Ratios"
+  },
+  {
+    "query": "Explain the concept of liquidity in terms of assets and provide a comparison between the liquidity of cash, accounts receivable, and inventory. Discuss why accounts receivable and inventory are considered less liquid than cash, and how their liquidity compares to that of land or buildings.",
+    "expected_url": "https://openstax.org/books/principles-finance/pages/6-3-liquidity-ratios",
+    "expected_heading": "6.3   Liquidity Ratios"
+  },
+  {
+    "query": "A company has a high debt-to-assets ratio and a low times interest earned ratio. What does this indicate about the company's solvency and its ability to meet long-term obligations? Explain your answer using the concepts of debt-to-assets ratio, debt-to-equity ratio, and times interest earned ratio.",
+    "expected_url": "https://openstax.org/books/principles-finance/pages/6-4-solvency-ratios",
+    "expected_heading": "6.4   Solvency Ratios"
+  },
+  {
+    "query": "Based on the case of Alibaba Group exceeding market expectations in its 2020 quarterly earnings releases, explain why some investors might prefer to rely on the cash flow statement rather than earnings per share (EPS) for more reliable and insightful information about a company's financial health.",
+    "expected_url": "https://openstax.org/books/principles-finance/pages/6-5-market-value-ratios",
+    "expected_heading": "6.5   Market Value Ratios"
+  },
+  {
+    "query": "Explain the role of different departments such as marketing, operations, accounting, human resources, and economics in the capital budgeting process and how their input can affect the estimation of the value of potential investments.",
+    "expected_url": "https://openstax.org/books/principles-finance/pages/1-1-what-is-finance?",
+    "expected_heading": "1.1   What Is Finance?"
+  },
+  {
+    "query": "Discuss the implications of businesses creating an e-trail and moving their data storage to the cloud. What are the benefits and potential risks associated with these changes? How can firms ensure the security and integrity of their data in this new environment?",
+    "expected_url": "https://openstax.org/books/principles-finance/pages/1-3-importance-of-data-and-technology",
+    "expected_heading": "1.3   Importance of Data and Technology"
+  },
+  {
+    "query": "Explain how the concept of a perpetuity can be used to analyze the basics of an annuity, providing examples for both scenarios.",
+    "expected_url": "https://openstax.org/books/principles-finance/pages/8-1-perpetuities",
+    "expected_heading": "8.1   Perpetuities"
+  },
+  {
+    "query": "Explain the key differences between the Discounted Payback Period, MIRR, and IRR methods of evaluating investments. Discuss how the MIRR method resolves the reinvestment rate assumption problem of the IRR method and how this might impact investment decisions.",
+    "expected_url": "https://openstax.org/books/principles-finance/pages/16-4-alternative-methods",
+    "expected_heading": "16.4   Alternative Methods"
+  },
+  {
+    "query": "Explain how a company can use futures contracts provided by CME Group Inc. to hedge risk, and discuss potential risks associated with such long-term contracts.",
+    "expected_url": "https://openstax.org/books/principles-finance/pages/20-2-commodity-price-risk",
+    "expected_heading": "20.2   Commodity Price Risk"
+  },
+  {
+    "query": "Explain how to calculate the total percent return from an investment, and discuss why expressing investment returns in percentage terms rather than dollar terms can be more beneficial when comparing investments of different sizes.",
+    "expected_url": "https://openstax.org/books/principles-finance/pages/15-1-risk-and-return-to-an-individual-asset",
+    "expected_heading": "15.1   Risk and Return to an Individual Asset"
+  },
+  {
+    "query": "Explain the concept of firm-specific risk and systematic risk in the context of a portfolio. How does holding multiple assets in a portfolio help in eliminating firm-specific risk? Also, describe how the risk and return of a portfolio are measured and why the risk of the portfolio is lower than the weighted average of the risk of the individual securities.",
+    "expected_url": "https://openstax.org/books/principles-finance/pages/15-2-risk-and-return-to-multiple-assets",
+    "expected_heading": "15.2   Risk and Return to Multiple Assets"
+  },
+  {
+    "query": "Compare and contrast the Sharpe ratio, the Treynor ratio, and Jensen's alpha in terms of how they measure a portfolio's performance. Discuss how each takes into account both risk and return, and explain a scenario where one might be a more appropriate measure than the others.",
+    "expected_url": "https://openstax.org/books/principles-finance/pages/15-4-applications-in-performance-measurement",
+    "expected_heading": "15.4   Applications in Performance Measurement"
+  },
+  {
+    "query": "Explain the process of how Treasury bills are auctioned, including the role of the Federal Reserve Bank of New York, and discuss the implications of the different maturity periods.",
+    "expected_url": "https://openstax.org/books/principles-finance/pages/12-1-overview-of-us-financial-markets",
+    "expected_heading": "12.1   Overview of US Financial Markets"
+  },
+  {
+    "query": "Based on Yellen's career trajectory as outlined in the text, discuss the potential influence and impact of her various roles within the Federal Reserve and as the head of the presidential council on economic policy and decision-making.",
+    "expected_url": "https://openstax.org/books/principles-finance/pages/12-2-historical-picture-of-inflation",
+    "expected_heading": "12.2   Historical Picture of Inflation"
+  },
+  {
+    "query": "You have decided to save money over the next 10 years with an uneven mixed cash stream. You plan to save $5,000 each year, with an additional $20,000 in year 5 and an additional $10,000 in year 8. Using a financial calculator or Microsoft Excel, calculate the future value of this mixed stream. Explain the steps you took to arrive at your answer.",
+    "expected_url": "https://openstax.org/books/principles-finance/pages/9-2-unequal-payments-using-a-financial-calculator-or-microsoft-excel",
+    "expected_heading": "9.2   Unequal Payments Using a Financial Calculator or Microsoft Excel"
+  },
+  {
+    "query": "Explain how the statement of cash flows complements the accrual accounting method and why it is crucial for a firm. Include in your answer the key elements of the statement of cash flows and how they reflect the sources and uses of cash during the accounting period.",
+    "expected_url": "https://openstax.org/books/principles-finance/pages/5-5-the-statement-of-cash-flows",
+    "expected_heading": "5.5   The Statement of Cash Flows"
+  },
+  {
+    "query": "Explain how inflation, unemployment, and gross domestic product are interconnected in the context of macroeconomics. Provide a hypothetical scenario where changes in one could impact the others.",
+    "expected_url": "https://openstax.org/books/principles-finance/pages/3-2-macroeconomics",
+    "expected_heading": "3.2   Macroeconomics"
+  },
+  {
+    "query": "Explain how measures of real income, employment, industrial production, and wholesale and retail sales, in addition to real GDP, can provide a comprehensive understanding of the economic activity during a recession. Provide examples to support your explanation.",
+    "expected_url": "https://openstax.org/books/principles-finance/pages/3-3-business-cycles-and-economic-activity",
+    "expected_heading": "3.3   Business Cycles and Economic Activity"
+  },
+  {
+    "query": "Explain the relationship between the nominal interest rate and inflation, and how this relationship impacts the real rate of interest. Additionally, discuss how this relationship could potentially affect the supply and demand in the market for loanable funds.",
+    "expected_url": "https://openstax.org/books/principles-finance/pages/3-4-interest-rates",
+    "expected_heading": "3.4   Interest Rates"
+  },
+  {
+    "query": "Explain how the principles of supply and demand apply to currency appreciation, using the example of the Mexican peso given in the text.",
+    "expected_url": "https://openstax.org/books/principles-finance/pages/3-5-foreign-exchange-rates",
+    "expected_heading": "3.5   Foreign Exchange Rates"
+  },
+  {
+    "query": "Explain how the timing of recording business transactions can impact the income statement, and provide an example of a scenario where this could significantly alter a company's reported net income.",
+    "expected_url": "https://openstax.org/books/principles-finance/pages/4-2-economic-basis-for-accrual-accounting",
+    "expected_heading": "4.2   Economic Basis for Accrual Accounting"
+  },
+  {
+    "query": "Explain the concept of revenue recognition in accounting with respect to gift cards. How does this concept impact the revenue generation and growth of businesses that heavily rely on gift card sales?",
+    "expected_url": "https://openstax.org/books/principles-finance/pages/4-3-how-does-a-company-recognize-a-sale-and-an-expense?",
+    "expected_heading": "4.3   How Does a Company Recognize a Sale and an Expense?"
+  },
+  {
+    "query": "Explain the process and implications of capitalizing an asset like a machine in a business. How does this impact the balance sheet and income statement over the asset's economic life?",
+    "expected_url": "https://openstax.org/books/principles-finance/pages/4-4-when-should-a-company-capitalize-or-expense-an-item?",
+    "expected_heading": "4.4   When Should a Company Capitalize or Expense an Item?"
+  },
+  {
+    "query": "Explain the concept of bond laddering as an investment strategy and discuss how it can mitigate the primary indicator of interest rate risk.",
+    "expected_url": "https://openstax.org/books/principles-finance/pages/10-4-risks-of-interest-rates-and-default",
+    "expected_heading": "10.4   Risks of Interest Rates and Default"
+  },
+  {
+    "query": "Explain the relationship between the coupon rate, yield to maturity, and the bond price in the context of the Bluebonnet Industries bond. How does the selling of bonds at a discount affect the yield to maturity for investors who hold the bond until maturity?",
+    "expected_url": "https://openstax.org/books/principles-finance/pages/17-2-the-costs-of-debt-and-equity-capital",
+    "expected_heading": "17.2   The Costs of Debt and Equity Capital"
+  },
+  {
+    "query": "Explain the concept of a levered firm using the T-shirt business example provided. Discuss how borrowing money impacts the risk and potential return of the business. Also, calculate the amount owed to lenders at the end of the year if $17,000 is borrowed at a risk-free interest rate of 4%.",
+    "expected_url": "https://openstax.org/books/principles-finance/pages/17-4-capital-structure-choices",
+    "expected_heading": "17.4   Capital Structure Choices"
+  },
+  {
+    "query": "Based on the given investment program, explain how the concept of compound interest applies over the five-year period. Discuss the impact of the 7% interest rate being compounded annually on the overall return of the investment, considering that no money is invested until the end of the first year.",
+    "expected_url": "https://openstax.org/books/principles-finance/pages/8-2-annuities",
+    "expected_heading": "8.2   Annuities"
+  },
+  {
+    "query": "Explain how the NPV profile is used to determine the sensitivity of the NPV to changes in the discount rate. Use the example of Sam's embroidery machine project to illustrate your explanation.",
+    "expected_url": "https://openstax.org/books/principles-finance/pages/16-2-net-present-value-(npv)-method",
+    "expected_heading": "16.2   Net Present Value (NPV) Method"
+  },
+  {
+    "query": "Explain how risk management in financial agreements can impact the value of a firm. Provide an example to illustrate your point.",
+    "expected_url": "https://openstax.org/books/principles-finance/pages/20-1-the-importance-of-risk-management",
+    "expected_heading": "20.1   The Importance of Risk Management"
+  },
+  {
+    "query": "Explain how the management of cash flow risk in global companies differs from domestic companies, considering factors such as differing business climates, customs, legal systems, languages, geopolitical events, and currency exchange rates. Provide examples to illustrate your points.",
+    "expected_url": "https://openstax.org/books/principles-finance/pages/20-3-exchange-rates-and-risk",
+    "expected_heading": "20.3   Exchange Rates and Risk"
+  },
+  {
+    "query": "Explain how the change in market interest rate from 5% to 6% affects the selling price of the five-year bond and the 30-year bond. Discuss the concept of interest rate risk in the context of these bonds.",
+    "expected_url": "https://openstax.org/books/principles-finance/pages/20-4-interest-rate-risk",
+    "expected_heading": "20.4   Interest Rate Risk"
+  },
+  {
+    "query": "Explain how the accrual basis of accounting impacts the operating efficiency ratios such as the accounts receivable turnover ratio. Provide an example using a hypothetical company's balance sheet.",
+    "expected_url": "https://openstax.org/books/principles-finance/pages/2014-winter-olympics-16-5-choosing-between-projects",
+    "expected_heading": "2014 Winter Olympics 16.5 Choosing between Projects"
+  },
+  {
+    "query": "Explain how a common-size income statement can be used to assess an organization's performance. Provide an example of how this could be applied in a real-world scenario, comparing two organizations within the same industry.",
+    "expected_url": "https://openstax.org/books/principles-finance/pages/5-7-common-size-statements",
+    "expected_heading": "5.7   Common-Size Statements"
+  },
+  {
+    "query": "Based on the equity accounts reported by Apple, Inc. in their 2020 Annual Report, explain the significance of each type of equity account (common stock, retained earnings, and accumulated other comprehensive income) and how they contribute to the overall financial health of the company.",
+    "expected_url": "https://openstax.org/books/principles-finance/pages/5-4-the-statement-of-owner\u2019s-equity",
+    "expected_heading": "5.4   The Statement of Owner\u2019s Equity"
+  },
+  {
+    "query": "Compare the taxation process of a sole proprietorship with that of other organizational forms, highlighting the key differences and explaining why taxation is simpler for sole proprietorships.",
+    "expected_url": "https://openstax.org/books/principles-finance/pages/2-1-business-structures",
+    "expected_heading": "2.1   Business Structures"
+  },
+  {
+    "query": "Explain the role of the Public Company Accounting Oversight Board as created by SOX, and discuss how it contributes to the fairness and accuracy of a company's financial reporting. Also, describe some of the prohibited activities of auditors as outlined by SOX.",
+    "expected_url": "https://openstax.org/books/principles-finance/pages/2-3-role-of-the-board-of-directors",
+    "expected_heading": "2.3   Role of the Board of Directors"
+  },
+  {
+    "query": "Explain how the investor relations function within a corporation can impact the company's stock prices, particularly in the context of press releases and quarterly conference calls. Provide examples to illustrate your points.",
+    "expected_url": "https://openstax.org/books/principles-finance/pages/2-5-interacting-with-investors,-intermediaries,-and-other-market-participants",
+    "expected_heading": "2.5   Interacting with Investors, Intermediaries, and Other Market Participants"
+  },
+  {
+    "query": "Based on the information provided about Sam's company and its investment in the machine, explain the concept of cash flow and how it impacts the company's decision to continue investing in the machine. Discuss why the company would continue this process until the accumulated increase in cash flow is equal to the original investment.",
+    "expected_url": "https://openstax.org/books/principles-finance/pages/16-1-payback-period-method",
+    "expected_heading": "16.1   Payback Period Method"
+  },
+  {
+    "query": "Explain the process of comparing the net present value (NPV) of two different projects, using the example of the larger, older ice-cream truck and the smaller, newer ice-cream truck. Discuss how the annuity is calculated and why it is important in this comparison.",
+    "expected_url": "https://openstax.org/books/principles-finance/pages/16-5-choosing-between-projects",
+    "expected_heading": "16.5   Choosing between Projects"
+  },
+  {
+    "query": "Compare and contrast the DCF model with DDMs, and explain how an investor might choose between the two models when considering a stock that does not pay dividends. Discuss the advantages and disadvantages of using the DCF model in this scenario.",
+    "expected_url": "https://openstax.org/books/principles-finance/pages/11-3-discounted-cash-flow-(dcf)-model",
+    "expected_heading": "11.3   Discounted Cash Flow (DCF) Model"
+  }
+]

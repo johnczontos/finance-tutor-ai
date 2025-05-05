@@ -49,7 +49,17 @@ def ask_question(request: QueryRequest):
         chain = get_qa_chain(request.detailLevel)
         result = chain(request.query)
         answer = result["result"]
-        sources = [doc.metadata.get("source", "unknown") for doc in result["source_documents"]]
+        sources = [
+            {
+                "heading": doc.metadata.get("heading", "Unknown"),
+                "url": doc.metadata.get("url", None),
+            }
+            for doc in result["source_documents"]
+        ]
+
+
+        for doc in result["source_documents"]:
+            print(doc.metadata)
 
         return {
             "answer": answer,
