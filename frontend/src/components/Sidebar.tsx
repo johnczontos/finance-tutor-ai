@@ -1,5 +1,6 @@
 import EnableKnowledgeCheck from './EnableKnowledgeCheck';
 import DetailLevelSlider from './DetailLevelSlider';
+import EnableSourcesDisplay from './EnableSourcesDisplay';
 import { useEffect, useRef } from 'react';
 
 type Props = {
@@ -9,6 +10,8 @@ type Props = {
   onToggleKnowledgeCheck: () => void;
   detailLevel: 'simple' | 'regular' | 'in-depth';
   onChangeDetailLevel: (level: 'simple' | 'regular' | 'in-depth') => void;
+  sourcesDisplayEnabled: boolean;
+  onToggleSourcesDisplay: () => void;
 };
 
 export default function Sidebar({
@@ -18,6 +21,8 @@ export default function Sidebar({
   onToggleKnowledgeCheck,
   detailLevel,
   onChangeDetailLevel,
+  sourcesDisplayEnabled,
+  onToggleSourcesDisplay,
 }: Props) {
   const sidebarRef = useRef<HTMLDivElement>(null);
 
@@ -46,29 +51,26 @@ export default function Sidebar({
         isOpen ? 'translate-x-0' : '-translate-x-full'
       }`}
     >
-      <div
-        className={`fixed top-0 left-0 h-full w-64 bg-white shadow-lg transform transition-transform duration-300 z-50 ${
-          isOpen ? 'translate-x-0' : '-translate-x-full'
-        }`}
-      >
-        <div className="flex items-center justify-between px-4 py-3 border-b">
-          <h2 className="text-lg font-bold">Menu</h2>
-          <button onClick={onClose} className="text-gray-500 hover:text-red-500 text-lg">
-            ✕
-          </button>
-        </div>
+      <div className="flex items-center justify-between px-4 py-3 border-b">
+        <h2 className="text-lg font-bold">Menu</h2>
+        <button onClick={onClose} className="text-gray-500 hover:text-red-500 text-lg">
+          ✕
+        </button>
+      </div>
 
-        <div className="p-4 space-y-6">
-          <EnableKnowledgeCheck
-            enabled={knowledgeCheckEnabled}
-            onToggle={onToggleKnowledgeCheck}
-          />
-          <DetailLevelSlider
-            value={detailLevel}
-            onChange={onChangeDetailLevel}
-          />
-          {/* You can add more sidebar menu items here if needed */}
-        </div>
+      <div className="p-4 space-y-6">
+        <EnableKnowledgeCheck
+          enabled={knowledgeCheckEnabled}
+          onToggle={onToggleKnowledgeCheck}
+        />
+        <EnableSourcesDisplay
+          enabled={sourcesDisplayEnabled}
+          onToggle={onToggleSourcesDisplay}
+        />
+        <DetailLevelSlider
+          value={detailLevel}
+          onChange={onChangeDetailLevel}
+        />
       </div>
     </div>
   );

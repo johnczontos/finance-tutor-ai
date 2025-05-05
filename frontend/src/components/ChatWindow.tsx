@@ -1,4 +1,5 @@
-import React, { useEffect, useRef } from 'react';
+// src/components/ChatWindow.tsx
+import { useEffect, useRef } from 'react';
 import ReactMarkdown from 'react-markdown';
 import { ChatMessage } from '../types/types';
 
