@@ -1,0 +1,16 @@
+fastapi
+gunicorn
+uvicorn
+langchain
+langchain-openai
+langchain-pinecone
+openai
+pinecone
+python-docx
+tiktoken
+python-dotenv
+requests
+pydantic
+pytube
+youtube-transcript-api
+google-api-python-client
