@@ -2,7 +2,7 @@ from fastapi import FastAPI, HTTPException
 from fastapi.middleware.cors import CORSMiddleware
 from openai import OpenAI
 from pydantic import BaseModel
-from rag_chain import get_qa_chain  # updated import
+from rag_chain import get_qa_chain, youtube_vectorstore
 import openai
 import os
 import json
@@ -57,13 +57,19 @@ def ask_question(request: QueryRequest):
             for doc in result["source_documents"]
         ]
 
-
-        for doc in result["source_documents"]:
-            print(doc.metadata)
+        youtube_results = youtube_vectorstore.similarity_search(request.query, k=3)
+        videos = [
+            {
+                "url": doc.metadata.get("url", ""),
+                "title": doc.metadata.get("heading", "YouTube Video")
+            }
+            for doc in youtube_results
+        ]
 
         return {
             "answer": answer,
-            "sources": sources
+            "sources": sources,
+            "videos": videos
         }
 
     except Exception as e:

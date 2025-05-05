@@ -5,6 +5,10 @@ export type ChatMessage = {
     url?: string;
     heading?: string;
   }[];
+  videos?: {
+    url: string;
+    title: string;
+  }[];
 };
 
 export type KnowledgeCheck = {

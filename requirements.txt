@@ -11,3 +11,6 @@ tiktoken
 python-dotenv
 requests
 pydantic
+pytube
+youtube-transcript-api
+google-api-python-client

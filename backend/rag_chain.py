@@ -23,6 +23,9 @@ pc = Pinecone(api_key=pinecone_api_key)
 index_name = "financetutor"
 vectorstore = PineconeVectorStore(index_name=index_name, embedding=embeddings)
 
+youtube_index_name = "youtube-index"
+youtube_vectorstore = PineconeVectorStore(index_name=youtube_index_name, embedding=OpenAIEmbeddings(api_key=openai_api_key))
+
 # Prompt templates based on detail level
 base_template = """
 You are an AI designed to answer questions with clear and concise explanations.

@@ -3,6 +3,7 @@ import Header from './components/Header';
 import Sidebar from './components/Sidebar';
 import ChatWindow from './components/ChatWindow';
 import SourcesDisplay from './components/SourcesDisplay';
+import YouTubeRecommendations from './components/YouTubeRecommendations';
 import ChatInput from './components/ChatInput';
 import QuerySuggestions from './components/QuerySuggestions';
 import KnowledgeCheck from './components/KnowledgeCheck';
@@ -14,10 +15,12 @@ function App() {
   const [sidebarOpen, setSidebarOpen] = useState(false);
   const [knowledgeCheckEnabled, setKnowledgeCheckEnabled] = useState(false);
   const [sourcesDisplayEnabled, setSourcesDisplayEnabled] = useState(true);
+  const [youtubeVideos, setYoutubeVideos] = useState<{ url: string; title: string }[]>([]);
   const [detailLevel, setDetailLevel] = useState<'simple' | 'regular' | 'in-depth'>('regular');
   const [currentQuiz, setCurrentQuiz] = useState<KnowledgeCheckType | null>(null);
   const [quizLoading, setQuizLoading] = useState(false);
   const [chatLoading, setChatLoading] = useState(false);
+  const [youtubeRecommendationsEnabled, setYouTubeRecommendationsEnabled] = useState(true);
 
   const [suggestedQueries, setSuggestedQueries] = useState<string[]>([]);
 
@@ -58,9 +61,10 @@ function App() {
       const assistantMsg: ChatMessage = {
         role: 'assistant',
         content: result.answer,
-        sources: result.sources || []
+        sources: result.sources || [],
       };
       addMessage(assistantMsg);
+      setYoutubeVideos(result.videos || []);
   
       if (knowledgeCheckEnabled) {
         setQuizLoading(true);
@@ -103,15 +107,26 @@ function App() {
         onChangeDetailLevel={setDetailLevel}
         sourcesDisplayEnabled={sourcesDisplayEnabled}                              // NEW
         onToggleSourcesDisplay={() => setSourcesDisplayEnabled(prev => !prev)}    // NEW
+        youtubeRecommendationsEnabled={youtubeRecommendationsEnabled}
+        onToggleYouTubeRecommendations={() => setYouTubeRecommendationsEnabled(prev => !prev)}
       />
       <Header onToggleSidebar={() => setSidebarOpen(!sidebarOpen)} />
       <div className="flex-1 overflow-y-auto pt-2 flex flex-col">
         <ChatWindow messages={messages} loading={chatLoading} />
 
-        {sourcesDisplayEnabled &&
-          messages.length > 0 &&
-          messages[messages.length - 1].role === 'assistant' && (
-            <SourcesDisplay sources={messages[messages.length - 1].sources || []} />
+        {messages.length > 0 && messages[messages.length - 1].role === 'assistant' && (
+          <div className="flex flex-col lg:flex-row justify-center items-start gap-6 px-4">
+            {sourcesDisplayEnabled && (
+              <div className="flex-1">
+                <SourcesDisplay sources={messages[messages.length - 1].sources || []} />
+              </div>
+            )}
+            {youtubeRecommendationsEnabled && youtubeVideos.length > 0 && (
+              <div className="flex-1">
+                <YouTubeRecommendations videos={youtubeVideos} />
+              </div>
+            )}
+          </div>
         )}
         <div className="transition-opacity duration-500" style={{ opacity: quizLoading ? 0.5 : 1 }}>
           {currentQuiz && <KnowledgeCheck quiz={currentQuiz} />}

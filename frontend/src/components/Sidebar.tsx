@@ -1,6 +1,7 @@
 import EnableKnowledgeCheck from './EnableKnowledgeCheck';
 import DetailLevelSlider from './DetailLevelSlider';
 import EnableSourcesDisplay from './EnableSourcesDisplay';
+import EnableYouTubeRecommendations from './EnableYouTubeRecommendations';
 import { useEffect, useRef } from 'react';
 
 type Props = {
@@ -12,6 +13,8 @@ type Props = {
   onChangeDetailLevel: (level: 'simple' | 'regular' | 'in-depth') => void;
   sourcesDisplayEnabled: boolean;
   onToggleSourcesDisplay: () => void;
+  youtubeRecommendationsEnabled: boolean;
+  onToggleYouTubeRecommendations: () => void;
 };
 
 export default function Sidebar({
@@ -23,6 +26,8 @@ export default function Sidebar({
   onChangeDetailLevel,
   sourcesDisplayEnabled,
   onToggleSourcesDisplay,
+  youtubeRecommendationsEnabled,
+  onToggleYouTubeRecommendations
 }: Props) {
   const sidebarRef = useRef<HTMLDivElement>(null);
 
@@ -66,6 +71,10 @@ export default function Sidebar({
         <EnableSourcesDisplay
           enabled={sourcesDisplayEnabled}
           onToggle={onToggleSourcesDisplay}
+        />
+        <EnableYouTubeRecommendations
+          enabled={youtubeRecommendationsEnabled}
+          onToggle={onToggleYouTubeRecommendations}
         />
         <DetailLevelSlider
           value={detailLevel}

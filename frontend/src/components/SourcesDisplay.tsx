@@ -22,7 +22,7 @@ const SourcesDisplay: React.FC<SourcesDisplayProps> = ({ sources }) => {
 
   return (
     <div className="mt-4 px-6">
-      <h3 className="text-sm font-semibold text-gray-700 mb-2">Sources:</h3>
+      <h3 className="text-lg font-semibold mb-3">Sources</h3>
       <ul className="space-y-2">
         {uniqueSources.map((src, idx) => (
           <li key={idx}>
