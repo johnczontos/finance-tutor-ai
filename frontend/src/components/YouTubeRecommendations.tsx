@@ -1,6 +1,4 @@
 // src/components/YouTubeRecommendations.tsx
-import React from 'react';
-
 type Video = {
   url: string;
   title: string;
