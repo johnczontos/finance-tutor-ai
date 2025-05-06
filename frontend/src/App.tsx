@@ -4,6 +4,7 @@ import Sidebar from './components/Sidebar';
 import ChatWindow from './components/ChatWindow';
 import SourcesDisplay from './components/SourcesDisplay';
 import YouTubeRecommendations from './components/YouTubeRecommendations';
+import AccordionSection from './components/AccordionSection';
 import ChatInput from './components/ChatInput';
 import QuerySuggestions from './components/QuerySuggestions';
 import KnowledgeCheck from './components/KnowledgeCheck';
@@ -24,16 +25,21 @@ function App() {
   const [quizLoading, setQuizLoading] = useState(false);
   const [chatLoading, setChatLoading] = useState(false);
   const [suggestedQueries, setSuggestedQueries] = useState<string[]>([]);
+  const [showSuggestions, setShowSuggestions] = useState(true);
 
-  useEffect(() => {
+  const loadSuggestions = () => {
     fetch('/example_queries.json')
-      .then(res => res.json())
+      .then((res) => res.json())
       .then((data: string[]) => {
         const shuffled = data.sort(() => 0.5 - Math.random());
         setSuggestedQueries(shuffled.slice(0, 4));
       })
-      .catch(err => console.error("Failed to load suggestions:", err));
-  }, []);
+      .catch((err) => console.error("Failed to load suggestions:", err));
+  };
+  
+  useEffect(() => {
+    if (showSuggestions) loadSuggestions();
+  }, [showSuggestions]);
 
   const addMessage = (msg: ChatMessage) => {
     setMessages(prev => [...prev, msg]);
@@ -46,6 +52,7 @@ function App() {
   const handleUserMessage = async (msg: ChatMessage) => {
     addMessage(msg);
     setCurrentQuiz(null);
+    setShowSuggestions(false);
     setChatLoading(true);
 
     const assistantMsg: ChatMessage = {
@@ -112,6 +119,8 @@ function App() {
     setMessages([]);
     setCurrentQuiz(null);
     setYoutubeVideos([]);
+    setShowSuggestions(true);
+    loadSuggestions();
   };
 
   const downloadChat = (messages: ChatMessage[]) => {
@@ -143,19 +152,25 @@ function App() {
       <div className="flex-1 overflow-y-auto pt-2 flex flex-col">
         <ChatWindow messages={messages} loading={chatLoading} />
 
-        {messages.length > 0 && messages[messages.length - 1].role === 'assistant' && (
-          <div className="flex flex-col lg:flex-row justify-center items-start gap-6 px-4">
-            {sourcesDisplayEnabled && (
-              <div className="flex-1">
-                <SourcesDisplay sources={messages[messages.length - 1].sources || []} />
-              </div>
-            )}
-            {youtubeRecommendationsEnabled && youtubeVideos.length > 0 && (
-              <div className="flex-1">
-                <YouTubeRecommendations videos={youtubeVideos} />
-              </div>
-            )}
-          </div>
+        {!chatLoading &&
+          messages.length > 0 &&
+          messages[messages.length - 1].role === 'assistant' && (
+            <div className="flex flex-col lg:flex-row justify-center items-start gap-6 px-4">
+              {sourcesDisplayEnabled && (
+                <div className="flex-1">
+                  <AccordionSection title="Sources">
+                    <SourcesDisplay sources={messages[messages.length - 1].sources || []} />
+                  </AccordionSection>
+                </div>
+              )}
+              {youtubeRecommendationsEnabled && youtubeVideos.length > 0 && (
+                <div className="flex-1">
+                  <AccordionSection title="Related Videos">
+                    <YouTubeRecommendations videos={youtubeVideos} />
+                  </AccordionSection>
+                </div>
+              )}
+            </div>
         )}
 
         <div className="transition-opacity duration-500" style={{ opacity: quizLoading ? 0.5 : 1 }}>
@@ -179,7 +194,7 @@ function App() {
         )}
       </div>
 
-      {suggestedQueries.length > 0 && (
+      {showSuggestions && suggestedQueries.length > 0 && (
         <QuerySuggestions examples={suggestedQueries} onSelect={handleSuggestedQuery} />
       )}
       <ChatInput onSend={handleUserMessage} disabled={chatLoading} />
