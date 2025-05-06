@@ -17,6 +17,7 @@ index_name = "youtube-index"
 
 # Initialize Pinecone
 pc = Pinecone(api_key=pinecone_api_key)
+pc.delete_index(index_name)
 if index_name not in [i["name"] for i in pc.list_indexes()]:
     pc.create_index(index_name, dimension=1536, metric="cosine", spec=ServerlessSpec(cloud="aws", region="us-east-1"))
 
@@ -27,37 +28,39 @@ vectorstore = PineconeVectorStore(index_name=index_name, embedding=embeddings)
 with open("video_metadata.json") as f:
     video_metadata = json.load(f)
 
-# Chunk transcript into ~5 min blocks
 def chunk_transcript(transcript, chunk_duration=300):
     chunks = []
-    current_chunk = []
-    current_start = 0.0
+    chunk_text = []
+    chunk_start = None
+    chunk_time = 0.0
 
     for entry in transcript:
-        if not current_chunk:
-            current_start = entry["start"]
+        if chunk_start is None:
+            chunk_start = entry["start"]
 
-        current_chunk.append(entry)
-        current_end = entry["start"] + entry.get("duration", 0)
+        chunk_text.append(entry["text"])
+        chunk_time = entry["start"] + entry.get("duration", 0)
 
-        if current_end - current_start >= chunk_duration:
+        # Check if current chunk exceeds duration
+        if chunk_time - chunk_start >= chunk_duration:
             chunks.append({
-                "text": " ".join(e["text"] for e in current_chunk),
-                "start": int(current_start)
+                "text": " ".join(chunk_text),
+                "start": int(chunk_start)
             })
-            current_chunk = []
+            chunk_text = []
+            chunk_start = None  # reset to capture next start
 
-    if current_chunk:
+    # Add final chunk
+    if chunk_text and chunk_start is not None:
         chunks.append({
-            "text": " ".join(e["text"] for e in current_chunk),
-            "start": int(current_start)
+            "text": " ".join(chunk_text),
+            "start": int(chunk_start)
         })
 
     return chunks
 
 documents = []
 for video in video_metadata:
-
     video_id = video.get("video_id")
     title = video.get("title")
     try:
@@ -66,12 +69,13 @@ for video in video_metadata:
 
         for chunk in chunks:
             ts_url = f"https://youtu.be/{video_id}?t={chunk['start']}"
+            print(ts_url)
             documents.append(Document(
                 page_content=chunk["text"],
                 metadata={"url": ts_url, "heading": title}
             ))
         print(f"✅ Loaded: {video_id} ({len(chunks)} chunks)")
-        time.sleep(1)
+        time.sleep(2)
     except TranscriptsDisabled:
         print(f"❌ Transcript disabled: {video_id}")
     except Exception as e:

@@ -80,6 +80,10 @@ async def ask_question_stream(
         for doc in youtube_results
     ]
 
+    for v in videos:
+        print(v['url'])
+        print(v['title'])
+
     # Compose prompt
     prompt_template = PromptTemplate(
         input_variables=["context", "question"],

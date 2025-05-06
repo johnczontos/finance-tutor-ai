@@ -1,4 +1,3 @@
-// src/components/YouTubeRecommendations.tsx
 type Video = {
   url: string;
   title: string;
@@ -16,7 +15,12 @@ export default function YouTubeRecommendations({ videos }: Props) {
       <h3 className="text-lg font-semibold mb-3">Related Videos</h3>
       <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
         {videos.map((video, idx) => {
-          const embedUrl = video.url.replace("watch?v=", "embed/").replace("youtu.be/", "www.youtube.com/embed/");
+          const [baseUrl, queryString] = video.url.split("?");
+          const startMatch = queryString?.match(/t=(\d+)/);
+          const startTime = startMatch ? `?start=${startMatch[1]}` : "";
+          const embedUrl = baseUrl
+            .replace("watch?v=", "embed/")
+            .replace("youtu.be/", "www.youtube.com/embed/") + startTime;
 
           return (
             <div key={idx} className="rounded-lg overflow-hidden shadow bg-white">
