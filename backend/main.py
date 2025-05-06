@@ -1,40 +1,46 @@
-from fastapi import FastAPI, HTTPException
+from fastapi import FastAPI, HTTPException, Request, Query
 from fastapi.middleware.cors import CORSMiddleware
+from sse_starlette.sse import EventSourceResponse
+from langchain.schema import Document
+from langchain.prompts import PromptTemplate
+from langchain_openai import ChatOpenAI
 from openai import OpenAI
 from pydantic import BaseModel
-from rag_chain import get_qa_chain, youtube_vectorstore
-import openai
-import os
+from rag_chain import vectorstore, youtube_vectorstore, detail_prompt_templates, openai_api_key
 import json
+import os
+import logging
 
 # Initialize FastAPI app
 app = FastAPI()
 
-# Allow frontend origin
-origins = [
-    "http://localhost:5173", 
-    "https://finance-tutor-ai.vercel.app",
-    "https://finance-tutor-ai-john-zontos-projects.vercel.app"
-]
-
+# CORS configuration
 app.add_middleware(
     CORSMiddleware,
-    allow_origins=origins, 
+    allow_origins=[
+        "http://localhost:5173",
+        "https://finance-tutor-ai.vercel.app",
+        "https://finance-tutor-ai-john-zontos-projects.vercel.app",
+    ],
     allow_credentials=True,
     allow_methods=["*"],
     allow_headers=["*"],
 )
 
-# Load OpenAI API key
-openai.api_key = os.getenv('OPENAI_API_KEY')
+# Load OpenAI key for quiz generation
+client = OpenAI(api_key=os.getenv("OPENAI_API_KEY"))
 
-# Request and response models
+
+# ----- Data Models -----
+
 class QueryRequest(BaseModel):
     query: str
-    detailLevel: str  # 'simple', 'regular', or 'in-depth'
+    detailLevel: str  # 'simple' | 'regular' | 'in-depth'
+
 
 class QuizRequest(BaseModel):
     topic: str
+
 
 class QuizResponse(BaseModel):
     question: str
@@ -42,42 +48,74 @@ class QuizResponse(BaseModel):
     correctAnswer: str
     explanation: str
 
-# Endpoint: /ask
-@app.post("/ask")
-def ask_question(request: QueryRequest):
-    try:
-        chain = get_qa_chain(request.detailLevel)
-        result = chain(request.query)
-        answer = result["result"]
-        sources = [
-            {
-                "heading": doc.metadata.get("heading", "Unknown"),
-                "url": doc.metadata.get("url", None),
-            }
-            for doc in result["source_documents"]
-        ]
 
-        youtube_results = youtube_vectorstore.similarity_search(request.query, k=3)
-        videos = [
-            {
-                "url": doc.metadata.get("url", ""),
-                "title": doc.metadata.get("heading", "YouTube Video")
-            }
-            for doc in youtube_results
-        ]
+# ----- Chat Streaming Endpoint -----
 
-        return {
-            "answer": answer,
-            "sources": sources,
-            "videos": videos
+@app.get("/ask/stream")
+async def ask_question_stream(
+    request: Request,
+    query: str = Query(...),
+    detailLevel: str = Query("regular")
+):
+    # Retrieve documents from vectorstore
+    docs: list[Document] = vectorstore.as_retriever().get_relevant_documents(query)
+
+    sources = [
+        {
+            "heading": doc.metadata.get("heading", "Unknown"),
+            "url": doc.metadata.get("url"),
         }
+        for doc in docs
+    ]
 
-    except Exception as e:
-        raise HTTPException(status_code=500, detail=str(e))
+    context = "\n\n".join([doc.page_content for doc in docs[:4]])
 
-client = OpenAI(api_key=os.getenv('OPENAI_API_KEY'))
+    # Retrieve YouTube video recommendations
+    youtube_results = youtube_vectorstore.similarity_search(query, k=3)
+    videos = [
+        {
+            "url": doc.metadata.get("url", ""),
+            "title": doc.metadata.get("heading", "YouTube Video")
+        }
+        for doc in youtube_results
+    ]
 
-# Endpoint: /generate-quiz
+    # Compose prompt
+    prompt_template = PromptTemplate(
+        input_variables=["context", "question"],
+        template=detail_prompt_templates.get(detailLevel, detail_prompt_templates["regular"])
+    )
+    prompt = prompt_template.format(context=context, question=query)
+
+    llm = ChatOpenAI(
+        model="gpt-4",
+        temperature=0,
+        api_key=openai_api_key,
+        streaming=True
+    )
+
+    async def token_stream():
+        try:
+            async for chunk in llm.astream(prompt):
+                if chunk.content:
+                    yield {"event": "message", "data": chunk.content}
+
+            # Emit metadata after streaming text
+            yield {"event": "metadata", "data": json.dumps({
+                "sources": sources,
+                "videos": videos
+            })}
+
+            yield {"event": "end", "data": ""}
+        except Exception as e:
+            logging.exception("❌ Streaming error:")
+            yield {"event": "error", "data": str(e)}
+
+    return EventSourceResponse(token_stream())
+
+
+# ----- Quiz Generation Endpoint -----
+
 @app.post("/generate-quiz", response_model=QuizResponse)
 def generate_quiz(request: QuizRequest):
     try:

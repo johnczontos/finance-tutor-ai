@@ -8,81 +8,110 @@ import ChatInput from './components/ChatInput';
 import QuerySuggestions from './components/QuerySuggestions';
 import KnowledgeCheck from './components/KnowledgeCheck';
 import { ChatMessage, KnowledgeCheck as KnowledgeCheckType } from './types/types';
-import { fetchAnswer, generateKnowledgeCheck } from './api/api';
+import { generateKnowledgeCheck } from './api/api';
+
+const API_BASE = import.meta.env.VITE_API_URL || '';
 
 function App() {
   const [messages, setMessages] = useState<ChatMessage[]>([]);
   const [sidebarOpen, setSidebarOpen] = useState(false);
   const [knowledgeCheckEnabled, setKnowledgeCheckEnabled] = useState(false);
   const [sourcesDisplayEnabled, setSourcesDisplayEnabled] = useState(true);
+  const [youtubeRecommendationsEnabled, setYouTubeRecommendationsEnabled] = useState(true);
   const [youtubeVideos, setYoutubeVideos] = useState<{ url: string; title: string }[]>([]);
   const [detailLevel, setDetailLevel] = useState<'simple' | 'regular' | 'in-depth'>('regular');
   const [currentQuiz, setCurrentQuiz] = useState<KnowledgeCheckType | null>(null);
   const [quizLoading, setQuizLoading] = useState(false);
   const [chatLoading, setChatLoading] = useState(false);
-  const [youtubeRecommendationsEnabled, setYouTubeRecommendationsEnabled] = useState(true);
-
   const [suggestedQueries, setSuggestedQueries] = useState<string[]>([]);
 
-  // Function to load 4 random suggestions
-  const loadSuggestions = () => {
+  useEffect(() => {
     fetch('/example_queries.json')
-      .then((res) => res.json())
+      .then(res => res.json())
       .then((data: string[]) => {
         const shuffled = data.sort(() => 0.5 - Math.random());
-        const selected = shuffled.slice(0, 4);
-        setSuggestedQueries(selected);
+        setSuggestedQueries(shuffled.slice(0, 4));
       })
-      .catch((err) => console.error("Failed to load suggestions:", err));
-  };
-
-  // Load on mount
-  useEffect(() => {
-    loadSuggestions();
+      .catch(err => console.error("Failed to load suggestions:", err));
   }, []);
 
   const addMessage = (msg: ChatMessage) => {
-    setMessages((prev) => [...prev, msg]);
+    setMessages(prev => [...prev, msg]);
   };
 
   const handleSuggestedQuery = async (query: string) => {
-    const userMessage: ChatMessage = { role: 'user', content: query };
-    await handleUserMessage(userMessage);
-    loadSuggestions(); // refresh after sending
-  };  
+    await handleUserMessage({ role: 'user', content: query });
+  };
 
   const handleUserMessage = async (msg: ChatMessage) => {
     addMessage(msg);
     setCurrentQuiz(null);
     setChatLoading(true);
-  
-    try {
-      const result = await fetchAnswer(msg.content, detailLevel);
-      const assistantMsg: ChatMessage = {
-        role: 'assistant',
-        content: result.answer,
-        sources: result.sources || [],
-      };
-      addMessage(assistantMsg);
-      setYoutubeVideos(result.videos || []);
-  
-      if (knowledgeCheckEnabled) {
+
+    const assistantMsg: ChatMessage = {
+      role: 'assistant',
+      content: '',
+      sources: [],
+    };
+    setMessages(prev => [...prev, assistantMsg]);
+
+    const url = `${API_BASE}/ask/stream?query=${encodeURIComponent(msg.content)}&detailLevel=${detailLevel}`;
+    const eventSource = new EventSource(url);
+
+    eventSource.addEventListener('message', (event) => {
+      setMessages(prev =>
+        prev.map((m, i) =>
+          i === prev.length - 1
+            ? { ...m, content: m.content + event.data }
+            : m
+        )
+      );
+    });
+
+    eventSource.addEventListener('metadata', (event) => {
+      try {
+        const parsed = JSON.parse(event.data);
+        setMessages(prev =>
+          prev.map((m, i) =>
+            i === prev.length - 1
+              ? { ...m, sources: parsed.sources || [] }
+              : m
+          )
+        );
+        setYoutubeVideos(parsed.videos || []);
+      } catch (err) {
+        console.error("Failed to parse metadata:", err);
+      }
+    });
+
+    eventSource.addEventListener('end', () => {
+      setChatLoading(false);
+      eventSource.close();
+    });
+
+    eventSource.onerror = (err) => {
+      console.error("SSE error:", err);
+      eventSource.close();
+      setChatLoading(false);
+    };
+
+    if (knowledgeCheckEnabled) {
+      try {
         setQuizLoading(true);
         const quizData = await generateKnowledgeCheck(msg.content);
         setCurrentQuiz(quizData);
+      } catch {
+        // fail silently
+      } finally {
         setQuizLoading(false);
       }
-    } catch (err) {
-      addMessage({ role: 'assistant', content: '⚠️ Something went wrong.' });
-      setQuizLoading(false);
-    } finally {
-      setChatLoading(false);
     }
   };
 
   const clearChat = () => {
     setMessages([]);
     setCurrentQuiz(null);
+    setYoutubeVideos([]);
   };
 
   const downloadChat = (messages: ChatMessage[]) => {
@@ -105,8 +134,8 @@ function App() {
         onToggleKnowledgeCheck={() => setKnowledgeCheckEnabled(prev => !prev)}
         detailLevel={detailLevel}
         onChangeDetailLevel={setDetailLevel}
-        sourcesDisplayEnabled={sourcesDisplayEnabled}                              // NEW
-        onToggleSourcesDisplay={() => setSourcesDisplayEnabled(prev => !prev)}    // NEW
+        sourcesDisplayEnabled={sourcesDisplayEnabled}
+        onToggleSourcesDisplay={() => setSourcesDisplayEnabled(prev => !prev)}
         youtubeRecommendationsEnabled={youtubeRecommendationsEnabled}
         onToggleYouTubeRecommendations={() => setYouTubeRecommendationsEnabled(prev => !prev)}
       />
@@ -128,6 +157,7 @@ function App() {
             )}
           </div>
         )}
+
         <div className="transition-opacity duration-500" style={{ opacity: quizLoading ? 0.5 : 1 }}>
           {currentQuiz && <KnowledgeCheck quiz={currentQuiz} />}
         </div>
@@ -139,19 +169,10 @@ function App() {
 
         {messages.length > 0 && (
           <div className="flex justify-center space-x-4 my-4 transition-opacity duration-500 opacity-100">
-            {/* Clear Chat Button */}
-            <button
-              onClick={clearChat}
-              className="px-4 py-2 bg-gray-300 text-gray-700 rounded hover:bg-gray-400 transition text-sm"
-            >
+            <button onClick={clearChat} className="px-4 py-2 bg-gray-300 text-gray-700 rounded hover:bg-gray-400 transition text-sm">
               Clear Chat
             </button>
-
-            {/* Download Chat Button */}
-            <button
-              onClick={() => downloadChat(messages)}
-              className="px-4 py-2 bg-gray-300 text-gray-700 rounded hover:bg-gray-400 transition text-sm"
-            >
+            <button onClick={() => downloadChat(messages)} className="px-4 py-2 bg-gray-300 text-gray-700 rounded hover:bg-gray-400 transition text-sm">
               Download Chat
             </button>
           </div>
@@ -161,7 +182,7 @@ function App() {
       {suggestedQueries.length > 0 && (
         <QuerySuggestions examples={suggestedQueries} onSelect={handleSuggestedQuery} />
       )}
-      <ChatInput onSend={(msg) => handleUserMessage(msg)} />
+      <ChatInput onSend={handleUserMessage} disabled={chatLoading} />
     </div>
   );
 }

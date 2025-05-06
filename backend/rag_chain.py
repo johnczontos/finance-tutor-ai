@@ -7,6 +7,7 @@ from langchain_openai import ChatOpenAI, OpenAIEmbeddings
 from langchain_pinecone import PineconeVectorStore
 from langchain.chains import RetrievalQA
 from langchain.prompts import PromptTemplate
+from langchain.callbacks.streaming_stdout import StreamingStdOutCallbackHandler
 from pinecone import Pinecone
 
 # Load API keys
@@ -15,7 +16,13 @@ openai_api_key = os.getenv("OPENAI_API_KEY")
 pinecone_api_key = os.getenv("PINECONE_API_KEY")
 
 # Init models
-llm = ChatOpenAI(model="gpt-4", temperature=0, api_key=openai_api_key)
+llm = ChatOpenAI(
+    model="gpt-4",
+    temperature=0,
+    api_key=openai_api_key,
+    streaming=True,  # ✅ Enable streaming
+    callbacks=[StreamingStdOutCallbackHandler()]  # Replace with custom handler below for full control
+)
 embeddings = OpenAIEmbeddings(api_key=openai_api_key)
 
 # Init Pinecone
@@ -34,7 +41,7 @@ The audience is business and finance undergraduate students.
 
 Explain your answers using step-by-step logic.
 Focus on guiding students through reasoning steps to grasp the principles behind the problems.
-Use markdown to make your Answers easier to follow by adding formatted section to your answer.
+Use markdown to make your Answers easier to follow by adding formatted sections to your answer.
 
 {style_instructions}
 
