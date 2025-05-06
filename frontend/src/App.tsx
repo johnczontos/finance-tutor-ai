@@ -149,7 +149,7 @@ function App() {
         onToggleYouTubeRecommendations={() => setYouTubeRecommendationsEnabled(prev => !prev)}
       />
       <Header onToggleSidebar={() => setSidebarOpen(!sidebarOpen)} />
-      <div className="flex-1 overflow-y-auto pt-2 flex flex-col">
+      <div className="flex-1 overflow-y-auto pt-[64px] flex flex-col">
         <ChatWindow messages={messages} loading={chatLoading} />
 
         {!chatLoading &&
@@ -194,10 +194,12 @@ function App() {
         )}
       </div>
 
-      {showSuggestions && suggestedQueries.length > 0 && (
-        <QuerySuggestions examples={suggestedQueries} onSelect={handleSuggestedQuery} />
-      )}
-      <ChatInput onSend={handleUserMessage} disabled={chatLoading} />
+      <div className="fixed bottom-0 left-0 right-0 z-50 bg-white border-t shadow-md">
+        {showSuggestions && suggestedQueries.length > 0 && (
+          <QuerySuggestions examples={suggestedQueries} onSelect={handleSuggestedQuery} />
+        )}
+        <ChatInput onSend={handleUserMessage} disabled={chatLoading} />
+      </div>
     </div>
   );
 }
