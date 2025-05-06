@@ -148,10 +148,14 @@ function App() {
         youtubeRecommendationsEnabled={youtubeRecommendationsEnabled}
         onToggleYouTubeRecommendations={() => setYouTubeRecommendationsEnabled(prev => !prev)}
       />
-      <Header onToggleSidebar={() => setSidebarOpen(!sidebarOpen)} />
-      <div className="flex-1 overflow-y-auto pt-[64px] flex flex-col">
+  
+      <div className="sticky top-0 z-40">
+        <Header onToggleSidebar={() => setSidebarOpen(!sidebarOpen)} />
+      </div>
+  
+      <div className="flex-1 overflow-y-auto pt-[64px] pb-[180px] flex flex-col">
         <ChatWindow messages={messages} loading={chatLoading} />
-
+  
         {!chatLoading &&
           messages.length > 0 &&
           messages[messages.length - 1].role === 'assistant' && (
@@ -172,7 +176,7 @@ function App() {
               )}
             </div>
         )}
-
+  
         <div className="transition-opacity duration-500" style={{ opacity: quizLoading ? 0.5 : 1 }}>
           {currentQuiz && <KnowledgeCheck quiz={currentQuiz} />}
         </div>
@@ -181,9 +185,9 @@ function App() {
             <div className="animate-spin rounded-full h-10 w-10 border-b-2 border-blue-600"></div>
           </div>
         )}
-
+  
         {messages.length > 0 && (
-          <div className="flex justify-center space-x-4 my-4 transition-opacity duration-500 opacity-100">
+          <div className="flex justify-center space-x-4 my-4 px-4">
             <button onClick={clearChat} className="px-4 py-2 bg-gray-300 text-gray-700 rounded hover:bg-gray-400 transition text-sm">
               Clear Chat
             </button>
@@ -193,7 +197,7 @@ function App() {
           </div>
         )}
       </div>
-
+  
       <div className="fixed bottom-0 left-0 right-0 z-50 bg-white border-t shadow-md">
         {showSuggestions && suggestedQueries.length > 0 && (
           <QuerySuggestions examples={suggestedQueries} onSelect={handleSuggestedQuery} />
