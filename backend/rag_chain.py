@@ -100,6 +100,7 @@ Avoid technical jargon entirely.
 Use short sentences, plain words, and everyday examples.
 Explain key terms if they appear in the context.
 Structure your answer using markdown with **bolded terms**, bullet points, and clear sections.
+Answer in a few paragraphs.
 """),
 
     "regular": base_template.format(style_instructions="""
@@ -113,8 +114,7 @@ Use numbered steps or bullet points where appropriate to guide reasoning.
 Use precise technical language suitable for graduate students in finance.
 Be thorough and detailed in your reasoning, breaking down complex ideas clearly.
 If relevant, reference specific models, formulas, or textbook sections from the context.
-Use markdown formatting including section headings, bold terms, equations (if mentioned), and explanatory lists.
-Do not include any information not found in the context.
+Use edge cases and equations when applicable.
 """)
 }
 

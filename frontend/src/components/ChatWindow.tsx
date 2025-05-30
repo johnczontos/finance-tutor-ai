@@ -16,8 +16,12 @@ export default function ChatWindow({ messages, loading }: Props) {
   const bottomRef = useRef<HTMLDivElement>(null);
 
   useEffect(() => {
+  if (loading) return; // don't scroll while streaming
+  const timeout = setTimeout(() => {
     bottomRef.current?.scrollIntoView({ behavior: 'smooth' });
-  }, [messages]);
+  }, 200);
+  return () => clearTimeout(timeout);
+}, [messages, loading]);
 
   return (
     <div className="flex flex-col space-y-4 h-[calc(100vh-160px)] overflow-y-auto p-6">
