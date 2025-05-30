@@ -1,6 +1,10 @@
 // src/components/ChatWindow.tsx
 import { useEffect, useRef } from 'react';
 import ReactMarkdown from 'react-markdown';
+import remarkMath from 'remark-math';
+import rehypeKatex from 'rehype-katex';
+import 'katex/dist/katex.min.css';
+
 import { ChatMessage } from '../types/types';
 
 type Props = {
@@ -16,16 +20,21 @@ export default function ChatWindow({ messages, loading }: Props) {
   }, [messages]);
 
   return (
-    <div className="flex flex-col space-y-4 max-h-[calc(100vh-160px)] overflow-y-auto p-6">
+    <div className="flex flex-col space-y-4 h-[calc(100vh-160px)] overflow-y-auto p-6">
       {messages.map((msg, i) => (
         <div
           key={i}
-          className={`max-w-xl px-4 py-2 rounded-lg text-sm whitespace-pre-wrap ${
-            msg.role === 'user' ? 'bg-blue-100 self-end' : 'bg-gray-100 self-start'
+          className={`max-w-xl px-4 py-2 rounded-lg ${
+            msg.role === 'user' ? 'bg-blue-100 self-end text-sm' : 'bg-gray-100 self-start prose prose-sm'
           }`}
         >
           {msg.role === 'assistant' ? (
-            <ReactMarkdown>{msg.content}</ReactMarkdown>
+            <ReactMarkdown
+              remarkPlugins={[remarkMath]}
+              rehypePlugins={[rehypeKatex]}
+            >
+              {msg.content}
+            </ReactMarkdown>
           ) : (
             msg.content
           )}

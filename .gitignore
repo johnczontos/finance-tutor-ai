@@ -28,6 +28,8 @@ frontend/dist/
 frontend/.turbo/
 frontend/.vercel/
 
+node_modules/
+
 # Vite/React build artifacts
 frontend/.cache/
 frontend/.vite/

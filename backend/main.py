@@ -48,8 +48,117 @@ class QuizResponse(BaseModel):
     correctAnswer: str
     explanation: str
 
+# Utility functions
 
-# ----- Chat Streaming Endpoint -----
+def build_prompt(question: str, context: str, detail_level: str) -> str:
+    template = PromptTemplate(
+        input_variables=["context", "question"],
+        template=detail_prompt_templates.get(detail_level, detail_prompt_templates["regular"])
+    )
+    return template.format(context=context, question=question)
+
+# def retrieve_documents(query: str, k: int = 3, threshold: float = 0.6) -> list[Document]:
+#     # Primary retriever: high precision with score threshold
+#     primary_retriever = vectorstore.as_retriever(
+#         search_type="similarity_score_threshold",
+#         search_kwargs={"score_threshold": threshold, "k": k}
+#     )
+#     docs = primary_retriever.get_relevant_documents(query)
+
+#     if not docs:
+#         logging.warning("⚠️ No results from score_threshold retriever — falling back to default retriever.")
+#         # Fallback retriever: standard similarity (or optionally use "mmr")
+#         fallback_retriever = vectorstore.as_retriever(
+#             search_type="similarity",
+#             search_kwargs={"k": k}
+#         )
+#         docs = fallback_retriever.get_relevant_documents(query)
+
+#     return docs
+
+# def retrieve_documents(query: str, k: int = 3) -> list[Document]:
+#     retriever = vectorstore.as_retriever(
+#         search_type="mmr",
+#         search_kwargs={
+#             "k": k,
+#             "fetch_k": 10,         # how many candidates to consider
+#             "lambda_mult": 0.6     # balance between relevance and diversity
+#         }
+#     )
+#     docs = retriever.get_relevant_documents(query)
+
+#     if not docs:
+#         logging.warning("⚠️ MMR retriever returned no documents.")
+
+#     return docs
+
+# def retrieve_documents(query: str, k: int = 3) -> list[Document]:
+#     retriever = vectorstore.as_retriever(
+#         search_type="similarity",  # use top-k similarity-based retrieval
+#         search_kwargs={
+#             "k": k
+#         }
+#     )
+#     docs = retriever.get_relevant_documents(query)
+
+#     if not docs:
+#         logging.warning("⚠️ Top-k retriever returned no documents.")
+
+#     return docs
+
+def retrieve_documents(query: str, k: int = 3, threshold: float = 0.6) -> list[Document]:
+    retriever = vectorstore.as_retriever(
+        search_type="similarity_score_threshold",
+        search_kwargs={
+            "score_threshold": threshold,
+            "k": k
+        }
+    )
+    docs = retriever.get_relevant_documents(query)
+    if not docs:
+        logging.warning("⚠️ No results from score_threshold retriever — falling back to default retriever.")
+        # Fallback retriever: standard similarity (or optionally use "mmr")
+        fallback_retriever = vectorstore.as_retriever(
+            search_type="similarity",
+            search_kwargs={"k": k}
+        )
+        docs = fallback_retriever.get_relevant_documents(query)
+
+    return docs
+
+# ----- Non-streaming Endpoint -----
+
+@app.get("/ask")
+async def ask_question(
+    query: str = Query(...),
+    detailLevel: str = Query("regular")
+):
+    try:
+        docs = retrieve_documents(query)
+
+        context = "\n\n".join([doc.page_content for doc in docs[:4]])
+        prompt = build_prompt(query, context, detailLevel)
+
+        llm = ChatOpenAI(
+            model="gpt-4.1",
+            temperature=0,
+            api_key=openai_api_key,
+            streaming=False
+        )
+
+        response = llm.invoke(prompt)
+        answer = response.content.strip()
+
+        return {
+            "answer": answer,
+            "contexts": [doc.page_content for doc in docs[:4]],
+        }
+
+    except Exception as e:
+        logging.exception("❌ Non-streaming RAG error:")
+        raise HTTPException(status_code=500, detail=str(e))
+
+# ----- Streaming Endpoint -----
 
 @app.get("/ask/stream")
 async def ask_question_stream(
@@ -57,65 +166,60 @@ async def ask_question_stream(
     query: str = Query(...),
     detailLevel: str = Query("regular")
 ):
-    # Retrieve documents from vectorstore
-    docs: list[Document] = vectorstore.as_retriever().get_relevant_documents(query)
+    try:
+        docs = retrieve_documents(query)
+        if not docs:
+            raise HTTPException(status_code=404, detail="No relevant documents found.")
 
-    sources = [
-        {
-            "heading": doc.metadata.get("heading", "Unknown"),
-            "url": doc.metadata.get("url"),
-        }
-        for doc in docs
-    ]
+        sources = [
+            {
+                "heading": doc.metadata.get("heading", "Unknown"),
+                "url": doc.metadata.get("url"),
+            }
+            for doc in docs
+        ]
 
-    context = "\n\n".join([doc.page_content for doc in docs[:4]])
+        context = "\n\n".join([doc.page_content for doc in docs[:4]])
+        prompt = build_prompt(query, context, detailLevel)
 
-    # Retrieve YouTube video recommendations
-    youtube_results = youtube_vectorstore.similarity_search(query, k=3)
-    videos = [
-        {
-            "url": doc.metadata.get("url", ""),
-            "title": doc.metadata.get("heading", "YouTube Video")
-        }
-        for doc in youtube_results
-    ]
+        # YouTube recommendations
+        youtube_results = youtube_vectorstore.similarity_search(query, k=3)
+        videos = [
+            {
+                "url": doc.metadata.get("url", ""),
+                "title": doc.metadata.get("heading", "YouTube Video")
+            }
+            for doc in youtube_results
+        ]
 
-    for v in videos:
-        print(v['url'])
-        print(v['title'])
+        llm = ChatOpenAI(
+            model="gpt-4o",
+            temperature=0.3,
+            api_key=openai_api_key,
+            streaming=True
+        )
 
-    # Compose prompt
-    prompt_template = PromptTemplate(
-        input_variables=["context", "question"],
-        template=detail_prompt_templates.get(detailLevel, detail_prompt_templates["regular"])
-    )
-    prompt = prompt_template.format(context=context, question=query)
+        async def token_stream():
+            try:
+                async for chunk in llm.astream(prompt):
+                    if chunk.content:
+                        yield {"event": "message", "data": chunk.content}
 
-    llm = ChatOpenAI(
-        model="gpt-4",
-        temperature=0,
-        api_key=openai_api_key,
-        streaming=True
-    )
+                yield {"event": "metadata", "data": json.dumps({
+                    "sources": sources,
+                    "videos": videos
+                })}
 
-    async def token_stream():
-        try:
-            async for chunk in llm.astream(prompt):
-                if chunk.content:
-                    yield {"event": "message", "data": chunk.content}
+                yield {"event": "end", "data": ""}
+            except Exception as e:
+                logging.exception("❌ Streaming error:")
+                yield {"event": "error", "data": str(e)}
 
-            # Emit metadata after streaming text
-            yield {"event": "metadata", "data": json.dumps({
-                "sources": sources,
-                "videos": videos
-            })}
+        return EventSourceResponse(token_stream())
 
-            yield {"event": "end", "data": ""}
-        except Exception as e:
-            logging.exception("❌ Streaming error:")
-            yield {"event": "error", "data": str(e)}
-
-    return EventSourceResponse(token_stream())
+    except Exception as e:
+        logging.exception("❌ Streaming endpoint failure:")
+        raise HTTPException(status_code=500, detail=str(e))
 
 
 # ----- Quiz Generation Endpoint -----

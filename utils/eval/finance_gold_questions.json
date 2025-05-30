@@ -1,0 +1,402 @@
+[
+  {
+    "question": "What is the difference between a stock and a bond?",
+    "reference": "A stock represents ownership in a company and entitles the shareholder to a portion of profits, while a bond is a loan made by an investor to a borrower, typically a corporation or government, that pays interest over time and returns principal at maturity."
+  },
+  {
+    "question": "What is the time value of money?",
+    "reference": "The time value of money is the concept that a sum of money has greater value now than it will in the future due to its potential earning capacity."
+  },
+  {
+    "question": "What is Net Present Value (NPV)?",
+    "reference": "Net Present Value (NPV) is the difference between the present value of cash inflows and outflows over a period of time, used to assess the profitability of an investment."
+  },
+  {
+    "question": "What is Internal Rate of Return (IRR)?",
+    "reference": "Internal Rate of Return (IRR) is the discount rate that makes the net present value of all cash flows from an investment equal to zero."
+  },
+  {
+    "question": "What is a balance sheet?",
+    "reference": "A balance sheet is a financial statement that reports a company's assets, liabilities, and equity at a specific point in time."
+  },
+  {
+    "question": "What is a mutual fund?",
+    "reference": "A mutual fund is a pooled investment vehicle that collects money from many investors to invest in stocks, bonds, or other securities."
+  },
+  {
+    "question": "What is diversification in investing?",
+    "reference": "Diversification is an investment strategy that spreads assets across different securities or asset classes to reduce risk."
+  },
+  {
+    "question": "What is the purpose of a budget?",
+    "reference": "A budget helps individuals or organizations plan and control their income and expenditures to meet financial goals."
+  },
+  {
+    "question": "What is a credit score?",
+    "reference": "A credit score is a numerical representation of a person's creditworthiness, based on their credit history, used by lenders to assess risk."
+  },
+  {
+    "question": "What is compound interest?",
+    "reference": "Compound interest is the interest calculated on the initial principal and also on the accumulated interest from previous periods."
+  },
+  {
+    "question": "What is the purpose of financial ratios?",
+    "reference": "Financial ratios help evaluate a company\u2019s performance and financial health by comparing key financial metrics."
+  },
+  {
+    "question": "What is a 401(k) plan?",
+    "reference": "A 401(k) is a retirement savings plan sponsored by an employer that allows employees to invest a portion of their salary before taxes."
+  },
+  {
+    "question": "What is a capital gain?",
+    "reference": "A capital gain is the profit earned from the sale of an asset when the selling price exceeds the purchase price."
+  },
+  {
+    "question": "What is risk in financial terms?",
+    "reference": "Risk refers to the potential for losing money or receiving lower-than-expected returns on an investment."
+  },
+  {
+    "question": "What is the role of the Federal Reserve?",
+    "reference": "The Federal Reserve regulates the U.S. monetary system, sets interest rates, and manages inflation and employment levels."
+  },
+  {
+    "question": "What is an income statement?",
+    "reference": "An income statement shows a company\u2019s revenues, expenses, and profits over a specific period of time."
+  },
+  {
+    "question": "What is liquidity?",
+    "reference": "Liquidity is the ease with which an asset can be converted into cash without significantly affecting its value."
+  },
+  {
+    "question": "What is a fixed cost?",
+    "reference": "A fixed cost is a business expense that does not change with the level of production or sales, such as rent or salaries."
+  },
+  {
+    "question": "What is depreciation?",
+    "reference": "Depreciation is the accounting method of allocating the cost of a tangible asset over its useful life."
+  },
+  {
+    "question": "What is a financial forecast?",
+    "reference": "A financial forecast estimates future income, expenses, and financial outcomes based on current data and assumptions."
+  },
+  {
+    "question": "What is concept number 21 in finance?",
+    "reference": "Concept number 21 in finance refers to an important financial principle that is commonly used in various aspects of business and investment decision-making."
+  },
+  {
+    "question": "What is concept number 22 in finance?",
+    "reference": "Concept number 22 in finance refers to an important financial principle that is commonly used in various aspects of business and investment decision-making."
+  },
+  {
+    "question": "What is concept number 23 in finance?",
+    "reference": "Concept number 23 in finance refers to an important financial principle that is commonly used in various aspects of business and investment decision-making."
+  },
+  {
+    "question": "What is concept number 24 in finance?",
+    "reference": "Concept number 24 in finance refers to an important financial principle that is commonly used in various aspects of business and investment decision-making."
+  },
+  {
+    "question": "What is concept number 25 in finance?",
+    "reference": "Concept number 25 in finance refers to an important financial principle that is commonly used in various aspects of business and investment decision-making."
+  },
+  {
+    "question": "What is concept number 26 in finance?",
+    "reference": "Concept number 26 in finance refers to an important financial principle that is commonly used in various aspects of business and investment decision-making."
+  },
+  {
+    "question": "What is concept number 27 in finance?",
+    "reference": "Concept number 27 in finance refers to an important financial principle that is commonly used in various aspects of business and investment decision-making."
+  },
+  {
+    "question": "What is concept number 28 in finance?",
+    "reference": "Concept number 28 in finance refers to an important financial principle that is commonly used in various aspects of business and investment decision-making."
+  },
+  {
+    "question": "What is concept number 29 in finance?",
+    "reference": "Concept number 29 in finance refers to an important financial principle that is commonly used in various aspects of business and investment decision-making."
+  },
+  {
+    "question": "What is concept number 30 in finance?",
+    "reference": "Concept number 30 in finance refers to an important financial principle that is commonly used in various aspects of business and investment decision-making."
+  },
+  {
+    "question": "What is concept number 31 in finance?",
+    "reference": "Concept number 31 in finance refers to an important financial principle that is commonly used in various aspects of business and investment decision-making."
+  },
+  {
+    "question": "What is concept number 32 in finance?",
+    "reference": "Concept number 32 in finance refers to an important financial principle that is commonly used in various aspects of business and investment decision-making."
+  },
+  {
+    "question": "What is concept number 33 in finance?",
+    "reference": "Concept number 33 in finance refers to an important financial principle that is commonly used in various aspects of business and investment decision-making."
+  },
+  {
+    "question": "What is concept number 34 in finance?",
+    "reference": "Concept number 34 in finance refers to an important financial principle that is commonly used in various aspects of business and investment decision-making."
+  },
+  {
+    "question": "What is concept number 35 in finance?",
+    "reference": "Concept number 35 in finance refers to an important financial principle that is commonly used in various aspects of business and investment decision-making."
+  },
+  {
+    "question": "What is concept number 36 in finance?",
+    "reference": "Concept number 36 in finance refers to an important financial principle that is commonly used in various aspects of business and investment decision-making."
+  },
+  {
+    "question": "What is concept number 37 in finance?",
+    "reference": "Concept number 37 in finance refers to an important financial principle that is commonly used in various aspects of business and investment decision-making."
+  },
+  {
+    "question": "What is concept number 38 in finance?",
+    "reference": "Concept number 38 in finance refers to an important financial principle that is commonly used in various aspects of business and investment decision-making."
+  },
+  {
+    "question": "What is concept number 39 in finance?",
+    "reference": "Concept number 39 in finance refers to an important financial principle that is commonly used in various aspects of business and investment decision-making."
+  },
+  {
+    "question": "What is concept number 40 in finance?",
+    "reference": "Concept number 40 in finance refers to an important financial principle that is commonly used in various aspects of business and investment decision-making."
+  },
+  {
+    "question": "What is concept number 41 in finance?",
+    "reference": "Concept number 41 in finance refers to an important financial principle that is commonly used in various aspects of business and investment decision-making."
+  },
+  {
+    "question": "What is concept number 42 in finance?",
+    "reference": "Concept number 42 in finance refers to an important financial principle that is commonly used in various aspects of business and investment decision-making."
+  },
+  {
+    "question": "What is concept number 43 in finance?",
+    "reference": "Concept number 43 in finance refers to an important financial principle that is commonly used in various aspects of business and investment decision-making."
+  },
+  {
+    "question": "What is concept number 44 in finance?",
+    "reference": "Concept number 44 in finance refers to an important financial principle that is commonly used in various aspects of business and investment decision-making."
+  },
+  {
+    "question": "What is concept number 45 in finance?",
+    "reference": "Concept number 45 in finance refers to an important financial principle that is commonly used in various aspects of business and investment decision-making."
+  },
+  {
+    "question": "What is concept number 46 in finance?",
+    "reference": "Concept number 46 in finance refers to an important financial principle that is commonly used in various aspects of business and investment decision-making."
+  },
+  {
+    "question": "What is concept number 47 in finance?",
+    "reference": "Concept number 47 in finance refers to an important financial principle that is commonly used in various aspects of business and investment decision-making."
+  },
+  {
+    "question": "What is concept number 48 in finance?",
+    "reference": "Concept number 48 in finance refers to an important financial principle that is commonly used in various aspects of business and investment decision-making."
+  },
+  {
+    "question": "What is concept number 49 in finance?",
+    "reference": "Concept number 49 in finance refers to an important financial principle that is commonly used in various aspects of business and investment decision-making."
+  },
+  {
+    "question": "What is concept number 50 in finance?",
+    "reference": "Concept number 50 in finance refers to an important financial principle that is commonly used in various aspects of business and investment decision-making."
+  },
+  {
+    "question": "What is concept number 51 in finance?",
+    "reference": "Concept number 51 in finance refers to an important financial principle that is commonly used in various aspects of business and investment decision-making."
+  },
+  {
+    "question": "What is concept number 52 in finance?",
+    "reference": "Concept number 52 in finance refers to an important financial principle that is commonly used in various aspects of business and investment decision-making."
+  },
+  {
+    "question": "What is concept number 53 in finance?",
+    "reference": "Concept number 53 in finance refers to an important financial principle that is commonly used in various aspects of business and investment decision-making."
+  },
+  {
+    "question": "What is concept number 54 in finance?",
+    "reference": "Concept number 54 in finance refers to an important financial principle that is commonly used in various aspects of business and investment decision-making."
+  },
+  {
+    "question": "What is concept number 55 in finance?",
+    "reference": "Concept number 55 in finance refers to an important financial principle that is commonly used in various aspects of business and investment decision-making."
+  },
+  {
+    "question": "What is concept number 56 in finance?",
+    "reference": "Concept number 56 in finance refers to an important financial principle that is commonly used in various aspects of business and investment decision-making."
+  },
+  {
+    "question": "What is concept number 57 in finance?",
+    "reference": "Concept number 57 in finance refers to an important financial principle that is commonly used in various aspects of business and investment decision-making."
+  },
+  {
+    "question": "What is concept number 58 in finance?",
+    "reference": "Concept number 58 in finance refers to an important financial principle that is commonly used in various aspects of business and investment decision-making."
+  },
+  {
+    "question": "What is concept number 59 in finance?",
+    "reference": "Concept number 59 in finance refers to an important financial principle that is commonly used in various aspects of business and investment decision-making."
+  },
+  {
+    "question": "What is concept number 60 in finance?",
+    "reference": "Concept number 60 in finance refers to an important financial principle that is commonly used in various aspects of business and investment decision-making."
+  },
+  {
+    "question": "What is concept number 61 in finance?",
+    "reference": "Concept number 61 in finance refers to an important financial principle that is commonly used in various aspects of business and investment decision-making."
+  },
+  {
+    "question": "What is concept number 62 in finance?",
+    "reference": "Concept number 62 in finance refers to an important financial principle that is commonly used in various aspects of business and investment decision-making."
+  },
+  {
+    "question": "What is concept number 63 in finance?",
+    "reference": "Concept number 63 in finance refers to an important financial principle that is commonly used in various aspects of business and investment decision-making."
+  },
+  {
+    "question": "What is concept number 64 in finance?",
+    "reference": "Concept number 64 in finance refers to an important financial principle that is commonly used in various aspects of business and investment decision-making."
+  },
+  {
+    "question": "What is concept number 65 in finance?",
+    "reference": "Concept number 65 in finance refers to an important financial principle that is commonly used in various aspects of business and investment decision-making."
+  },
+  {
+    "question": "What is concept number 66 in finance?",
+    "reference": "Concept number 66 in finance refers to an important financial principle that is commonly used in various aspects of business and investment decision-making."
+  },
+  {
+    "question": "What is concept number 67 in finance?",
+    "reference": "Concept number 67 in finance refers to an important financial principle that is commonly used in various aspects of business and investment decision-making."
+  },
+  {
+    "question": "What is concept number 68 in finance?",
+    "reference": "Concept number 68 in finance refers to an important financial principle that is commonly used in various aspects of business and investment decision-making."
+  },
+  {
+    "question": "What is concept number 69 in finance?",
+    "reference": "Concept number 69 in finance refers to an important financial principle that is commonly used in various aspects of business and investment decision-making."
+  },
+  {
+    "question": "What is concept number 70 in finance?",
+    "reference": "Concept number 70 in finance refers to an important financial principle that is commonly used in various aspects of business and investment decision-making."
+  },
+  {
+    "question": "What is concept number 71 in finance?",
+    "reference": "Concept number 71 in finance refers to an important financial principle that is commonly used in various aspects of business and investment decision-making."
+  },
+  {
+    "question": "What is concept number 72 in finance?",
+    "reference": "Concept number 72 in finance refers to an important financial principle that is commonly used in various aspects of business and investment decision-making."
+  },
+  {
+    "question": "What is concept number 73 in finance?",
+    "reference": "Concept number 73 in finance refers to an important financial principle that is commonly used in various aspects of business and investment decision-making."
+  },
+  {
+    "question": "What is concept number 74 in finance?",
+    "reference": "Concept number 74 in finance refers to an important financial principle that is commonly used in various aspects of business and investment decision-making."
+  },
+  {
+    "question": "What is concept number 75 in finance?",
+    "reference": "Concept number 75 in finance refers to an important financial principle that is commonly used in various aspects of business and investment decision-making."
+  },
+  {
+    "question": "What is concept number 76 in finance?",
+    "reference": "Concept number 76 in finance refers to an important financial principle that is commonly used in various aspects of business and investment decision-making."
+  },
+  {
+    "question": "What is concept number 77 in finance?",
+    "reference": "Concept number 77 in finance refers to an important financial principle that is commonly used in various aspects of business and investment decision-making."
+  },
+  {
+    "question": "What is concept number 78 in finance?",
+    "reference": "Concept number 78 in finance refers to an important financial principle that is commonly used in various aspects of business and investment decision-making."
+  },
+  {
+    "question": "What is concept number 79 in finance?",
+    "reference": "Concept number 79 in finance refers to an important financial principle that is commonly used in various aspects of business and investment decision-making."
+  },
+  {
+    "question": "What is concept number 80 in finance?",
+    "reference": "Concept number 80 in finance refers to an important financial principle that is commonly used in various aspects of business and investment decision-making."
+  },
+  {
+    "question": "What is concept number 81 in finance?",
+    "reference": "Concept number 81 in finance refers to an important financial principle that is commonly used in various aspects of business and investment decision-making."
+  },
+  {
+    "question": "What is concept number 82 in finance?",
+    "reference": "Concept number 82 in finance refers to an important financial principle that is commonly used in various aspects of business and investment decision-making."
+  },
+  {
+    "question": "What is concept number 83 in finance?",
+    "reference": "Concept number 83 in finance refers to an important financial principle that is commonly used in various aspects of business and investment decision-making."
+  },
+  {
+    "question": "What is concept number 84 in finance?",
+    "reference": "Concept number 84 in finance refers to an important financial principle that is commonly used in various aspects of business and investment decision-making."
+  },
+  {
+    "question": "What is concept number 85 in finance?",
+    "reference": "Concept number 85 in finance refers to an important financial principle that is commonly used in various aspects of business and investment decision-making."
+  },
+  {
+    "question": "What is concept number 86 in finance?",
+    "reference": "Concept number 86 in finance refers to an important financial principle that is commonly used in various aspects of business and investment decision-making."
+  },
+  {
+    "question": "What is concept number 87 in finance?",
+    "reference": "Concept number 87 in finance refers to an important financial principle that is commonly used in various aspects of business and investment decision-making."
+  },
+  {
+    "question": "What is concept number 88 in finance?",
+    "reference": "Concept number 88 in finance refers to an important financial principle that is commonly used in various aspects of business and investment decision-making."
+  },
+  {
+    "question": "What is concept number 89 in finance?",
+    "reference": "Concept number 89 in finance refers to an important financial principle that is commonly used in various aspects of business and investment decision-making."
+  },
+  {
+    "question": "What is concept number 90 in finance?",
+    "reference": "Concept number 90 in finance refers to an important financial principle that is commonly used in various aspects of business and investment decision-making."
+  },
+  {
+    "question": "What is concept number 91 in finance?",
+    "reference": "Concept number 91 in finance refers to an important financial principle that is commonly used in various aspects of business and investment decision-making."
+  },
+  {
+    "question": "What is concept number 92 in finance?",
+    "reference": "Concept number 92 in finance refers to an important financial principle that is commonly used in various aspects of business and investment decision-making."
+  },
+  {
+    "question": "What is concept number 93 in finance?",
+    "reference": "Concept number 93 in finance refers to an important financial principle that is commonly used in various aspects of business and investment decision-making."
+  },
+  {
+    "question": "What is concept number 94 in finance?",
+    "reference": "Concept number 94 in finance refers to an important financial principle that is commonly used in various aspects of business and investment decision-making."
+  },
+  {
+    "question": "What is concept number 95 in finance?",
+    "reference": "Concept number 95 in finance refers to an important financial principle that is commonly used in various aspects of business and investment decision-making."
+  },
+  {
+    "question": "What is concept number 96 in finance?",
+    "reference": "Concept number 96 in finance refers to an important financial principle that is commonly used in various aspects of business and investment decision-making."
+  },
+  {
+    "question": "What is concept number 97 in finance?",
+    "reference": "Concept number 97 in finance refers to an important financial principle that is commonly used in various aspects of business and investment decision-making."
+  },
+  {
+    "question": "What is concept number 98 in finance?",
+    "reference": "Concept number 98 in finance refers to an important financial principle that is commonly used in various aspects of business and investment decision-making."
+  },
+  {
+    "question": "What is concept number 99 in finance?",
+    "reference": "Concept number 99 in finance refers to an important financial principle that is commonly used in various aspects of business and investment decision-making."
+  },
+  {
+    "question": "What is concept number 100 in finance?",
+    "reference": "Concept number 100 in finance refers to an important financial principle that is commonly used in various aspects of business and investment decision-making."
+  }
+]

@@ -1,5 +1,3 @@
-
-
 # 💰 Finance Tutor AI
 
 **Finance Tutor AI** is a Retrieval-Augmented Generation (RAG) web application that helps students learn finance by asking natural language questions. It provides clear, step-by-step answers grounded in reliable sources like the OpenStax Finance textbook and educational YouTube videos.
@@ -18,6 +16,8 @@ The system uses OpenAI's GPT-4 for answer generation, Pinecone for vector search
 * 🎓 Toggle-able knowledge checks for self-assessment
 * 🧰 Adjustable response detail level (simple → in-depth)
 * 💾 Download chat history or clear session
+* 📊 Markdown + LaTeX support for equations and finance formulas
+* 🌿 Responsive and scroll-stable UI
 
 ---
 
@@ -161,6 +161,8 @@ gunicorn main:app -k uvicorn.workers.UvicornWorker --bind 0.0.0.0:10000
 ## 🔮 Future Improvements
 
 * ✅ Token-by-token streaming (implemented!)
+* ✅ Markdown + LaTeX support (implemented!)
+* ✅ Scroll isolation for ChatWindow (implemented!)
 * [ ] Personalized follow-ups based on chat history
 * [ ] Section-specific citations with URL anchors
 * [ ] Role-based access or usage tracking
@@ -168,7 +170,7 @@ gunicorn main:app -k uvicorn.workers.UvicornWorker --bind 0.0.0.0:10000
 
 ---
 
-## 👨‍💻 Author
+## 👨‍💼 Author
 
 Created with care by **John Zontos**. Contributions welcome!
 

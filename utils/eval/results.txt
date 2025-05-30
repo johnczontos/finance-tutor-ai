@@ -1,0 +1,67 @@
+results:
+
+___gpt-4o___simularity_score__k: int = 3, threshold: float = 0.6
+📊 RAGAS Summary Metrics:
+Faithfulness: 0.422
+Answer Relevancy: 0.546
+Context Precision: 0.530
+Context Recall: 0.419
+📈 Metric bar chart saved to new_ragas_metric_plot.png
+✅ Latency data saved to new_ragas_latency.csv
+
+
+___gpt-4.1___simularity_score__k: int = 3, threshold: float = 0.6
+📊 RAGAS Summary Metrics:
+Faithfulness: 0.576
+Answer Relevancy: 0.719
+Context Precision: 0.560
+Context Recall: 0.429
+📈 Metric bar chart saved to new_ragas_metric_plot.png
+✅ Latency data saved to new_ragas_latency.csv
+
+___gpt-4.1___mmr___
+📊 RAGAS Summary Metrics:
+Faithfulness: 0.581
+Answer Relevancy: 0.738
+Context Precision: 0.504
+Context Recall: 0.412
+📈 Metric bar chart saved to new_ragas_metric_plot.png
+✅ Latency data saved to new_ragas_latency.csv
+
+
+___gpt-4. top-k
+📊 RAGAS Summary Metrics:
+Faithfulness: 0.586
+Answer Relevancy: 0.981
+Context Precision: 0.530
+Context Recall: 0.396
+📈 Metric bar chart saved to new_ragas_metric_plot.png
+✅ Latency data saved to new_ragas_latency.csv
+
+
+📊 RAGAS Summary Metrics:
+Faithfulness: 0.636
+Answer Relevancy: 0.981
+Context Precision: 0.453
+Context Recall: 0.339
+📈 Metric bar chart saved to new_ragas_metric_plot.png
+✅ Latency data saved to new_ragas_latency.csv
+
+
+📊 RAGAS Summary Metrics:
+Faithfulness: 0.747
+Answer Relevancy: 0.930
+Context Precision: 0.953
+Context Recall: 0.673
+
+
+⏱️ Latency Summary:
+       latency_sec
+count      213.000
+mean        13.813
+std          5.318
+min          4.827
+25%          9.867
+50%         13.068
+75%         16.897
+max         29.867

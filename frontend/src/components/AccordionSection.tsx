@@ -6,7 +6,7 @@ type Props = {
 };
 
 export default function AccordionSection({ title, children }: Props) {
-  const [isOpen, setIsOpen] = useState(true);
+  const [isOpen, setIsOpen] = useState(false);
 
   // Collapse by default on small screens
   useEffect(() => {

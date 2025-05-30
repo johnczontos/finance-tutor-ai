@@ -10,6 +10,7 @@ import QuerySuggestions from './components/QuerySuggestions';
 import KnowledgeCheck from './components/KnowledgeCheck';
 import { ChatMessage, KnowledgeCheck as KnowledgeCheckType } from './types/types';
 import { generateKnowledgeCheck } from './api/api';
+import 'katex/dist/katex.min.css';
 
 const API_BASE = import.meta.env.VITE_API_URL || '';
 
@@ -149,13 +150,17 @@ function App() {
         onToggleYouTubeRecommendations={() => setYouTubeRecommendationsEnabled(prev => !prev)}
       />
   
+      {/* Sticky header */}
       <div className="sticky top-0 z-40">
         <Header onToggleSidebar={() => setSidebarOpen(!sidebarOpen)} />
       </div>
   
-      <div className="flex-1 overflow-y-auto pt-[64px] pb-[180px] flex flex-col">
+      {/* Main content area (non-scrollable) */}
+      <div className="flex-1 pt-[64px] pb-[96px] flex flex-col overflow-hidden">
+        {/* ChatWindow now controls its own scrolling */}
         <ChatWindow messages={messages} loading={chatLoading} />
   
+        {/* Optional metadata after chat */}
         {!chatLoading &&
           messages.length > 0 &&
           messages[messages.length - 1].role === 'assistant' && (
@@ -180,6 +185,7 @@ function App() {
         <div className="transition-opacity duration-500" style={{ opacity: quizLoading ? 0.5 : 1 }}>
           {currentQuiz && <KnowledgeCheck quiz={currentQuiz} />}
         </div>
+  
         {quizLoading && (
           <div className="flex justify-center items-center mt-6">
             <div className="animate-spin rounded-full h-10 w-10 border-b-2 border-blue-600"></div>
@@ -188,16 +194,23 @@ function App() {
   
         {messages.length > 0 && (
           <div className="flex justify-center space-x-4 my-4 px-4">
-            <button onClick={clearChat} className="px-4 py-2 bg-gray-300 text-gray-700 rounded hover:bg-gray-400 transition text-sm">
+            <button
+              onClick={clearChat}
+              className="px-4 py-2 bg-gray-300 text-gray-700 rounded hover:bg-gray-400 transition text-sm"
+            >
               Clear Chat
             </button>
-            <button onClick={() => downloadChat(messages)} className="px-4 py-2 bg-gray-300 text-gray-700 rounded hover:bg-gray-400 transition text-sm">
+            <button
+              onClick={() => downloadChat(messages)}
+              className="px-4 py-2 bg-gray-300 text-gray-700 rounded hover:bg-gray-400 transition text-sm"
+            >
               Download Chat
             </button>
           </div>
         )}
       </div>
   
+      {/* Input area */}
       <div className="fixed bottom-0 left-0 right-0 z-50 bg-white border-t shadow-md">
         {showSuggestions && suggestedQueries.length > 0 && (
           <QuerySuggestions examples={suggestedQueries} onSelect={handleSuggestedQuery} />
@@ -205,7 +218,7 @@ function App() {
         <ChatInput onSend={handleUserMessage} disabled={chatLoading} />
       </div>
     </div>
-  );
+  );  
 }
 
 export default App;
