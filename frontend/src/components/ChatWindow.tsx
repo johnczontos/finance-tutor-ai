@@ -53,7 +53,7 @@ export default function ChatWindow({ messages, loading }: Props) {
       )}
 
       {/* Auto-scroll anchor */}
-      <div ref={bottomRef} />
+      {/* <div ref={bottomRef} /> */}
     </div>
   );
 }

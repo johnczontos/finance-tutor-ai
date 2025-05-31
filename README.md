@@ -1,4 +1,4 @@
-# 💰 Finance Tutor AI
+# Finance Tutor AI
 
 **Finance Tutor AI** is a Retrieval-Augmented Generation (RAG) web application that helps students learn finance by asking natural language questions. It provides clear, step-by-step answers grounded in reliable sources like the OpenStax Finance textbook and educational YouTube videos.
 
@@ -6,22 +6,22 @@ The system uses OpenAI's GPT-4 for answer generation, Pinecone for vector search
 
 ---
 
-## ✨ Features
+## Features
 
-* 🧠 Ask finance-related questions in natural language
-* 📚 Answers grounded in OpenStax Principles of Finance and curated YouTube videos
-* 🔗 Cited sources with clickable timestamps and URLs
-* ⚡ Real-time streaming of LLM responses via Server-Sent Events (SSE)
-* 🎥 Optional video recommendations powered by vector search on transcript chunks
-* 🎓 Toggle-able knowledge checks for self-assessment
-* 🧰 Adjustable response detail level (simple → in-depth)
-* 💾 Download chat history or clear session
-* 📊 Markdown + LaTeX support for equations and finance formulas
-* 🌿 Responsive and scroll-stable UI
+* Ask finance-related questions in natural language
+* Answers grounded in OpenStax Principles of Finance and curated YouTube videos
+* Cited sources with clickable timestamps and URLs
+* Real-time streaming of LLM responses via Server-Sent Events (SSE)
+* Optional video recommendations powered by vector search on transcript chunks
+* Toggle-able knowledge checks for self-assessment
+* Adjustable response detail level (simple → in-depth)
+* Download chat history or clear session
+* Markdown + LaTeX support for equations and finance formulas
+* Responsive and scroll-stable UI
 
 ---
 
-## 🛠️ Tech Stack
+## Tech Stack
 
 | Layer          | Technology                            |
 | -------------- | ------------------------------------- |
@@ -34,7 +34,7 @@ The system uses OpenAI's GPT-4 for answer generation, Pinecone for vector search
 
 ---
 
-## 🚀 Getting Started
+## Getting Started
 
 ### 1. Clone the repository
 
@@ -76,7 +76,7 @@ Open `http://localhost:5173` in your browser.
 
 ---
 
-## 📂 Project Structure
+## Project Structure
 
 ```
 finance-tutor-ai/
@@ -98,7 +98,7 @@ finance-tutor-ai/
 
 ---
 
-## 📡 API Endpoints
+## API Endpoints
 
 ### `GET /ask/stream`
 
@@ -138,7 +138,7 @@ Returns a single multiple-choice knowledge check.
 
 ---
 
-## ☁️ Deployment
+## Deployment
 
 ### Frontend (Vercel)
 
@@ -158,7 +158,7 @@ gunicorn main:app -k uvicorn.workers.UvicornWorker --bind 0.0.0.0:10000
 
 ---
 
-## 🔮 Future Improvements
+## Future Improvements
 
 * ✅ Token-by-token streaming (implemented!)
 * ✅ Markdown + LaTeX support (implemented!)
@@ -166,17 +166,16 @@ gunicorn main:app -k uvicorn.workers.UvicornWorker --bind 0.0.0.0:10000
 * [ ] Personalized follow-ups based on chat history
 * [ ] Section-specific citations with URL anchors
 * [ ] Role-based access or usage tracking
-* [ ] Quiz generation tuned by Bloom’s taxonomy
 
 ---
 
-## 👨‍💼 Author
+## Author
 
 Created with care by **John Zontos**. Contributions welcome!
 
 ---
 
-## 📄 License
+## License
 
 [MIT](LICENSE)
 
