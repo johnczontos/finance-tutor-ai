@@ -9,9 +9,9 @@ export default function DetailLevelSlider({ value, onChange }: Props) {
   const levels: DetailLevel[] = ['simple', 'regular', 'in-depth'];
 
   const labelMap = {
-    simple: 'Simple',
+    simple: 'Novice',
     regular: 'Regular',
-    'in-depth': 'In-depth',
+    'in-depth': 'Advanced',
   };
 
   return (

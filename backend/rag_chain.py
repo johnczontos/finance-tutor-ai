@@ -41,7 +41,7 @@ The audience is business and finance undergraduate students.
 
 Use:
 - Markdown for headings, lists, and emphasis.
-- LaTeX for inline math with `$...$` and block math with `$$...$$`.
+- KaTeX for inline math with `$...$` and block math with `$$...$$`. DO NOT use '(...)' for variables.
 - Step-by-step explanations to build understanding.
 
 {style_instructions}
@@ -55,25 +55,25 @@ Question:
 Answer:
 """
 
-# detail_prompt_templates: Dict[str, str] = {
-#     "simple": base_template.format(style_instructions="""
-# Write in simple, clear language.
-# Avoid technical jargon.
-# Use short sentences and plain words.
-# """),
+detail_prompt_templates: Dict[str, str] = {
+    "simple": base_template.format(style_instructions="""
+Write in simple, clear language.
+Avoid technical jargon.
+Use short sentences and plain words.
+"""),
 
-#     "regular": base_template.format(style_instructions="""
-# Use clear, academic language.
-# Define any finance-specific terms.
-# Answer with clarity and completeness.
-# """),
+    "regular": base_template.format(style_instructions="""
+Use clear, academic language.
+Define any finance-specific terms.
+Answer with clarity and completeness.
+"""),
 
-#     "in-depth": base_template.format(style_instructions="""
-# Write with deep technical clarity, suitable for graduate students.
-# Be detailed and thorough.
-# Use sources when necessary.
-# """)
-# }
+    "in-depth": base_template.format(style_instructions="""
+Write with deep technical clarity, suitable for graduate students.
+Be detailed and thorough.
+Use sources when necessary.
+""")
+}
 
 # base_template = """
 # You are an AI finance tutor helping undergraduate business students understand finance concepts.
@@ -93,30 +93,28 @@ Answer:
 # ### ✅ Answer:
 # """
 
-detail_prompt_templates: Dict[str, str] = {
-    "simple": base_template.format(style_instructions="""
-Write in very simple, accessible language.
-Avoid technical jargon entirely.
-Use short sentences, plain words, and everyday examples.
-Explain key terms if they appear in the context.
-Structure your answer using markdown with **bolded terms**, bullet points, and clear sections.
-Answer in a few paragraphs.
-"""),
+# detail_prompt_templates: Dict[str, str] = {
+#     "simple": base_template.format(style_instructions="""
+# Write in very simple, accessible language.
+# Avoid technical jargon entirely.
+# Use short sentences, plain words, and everyday examples.
+# Explain key terms if they appear in the context.
+# Structure your answer using markdown with **bolded terms**, bullet points, and clear sections.
+# """),
 
-    "regular": base_template.format(style_instructions="""
-Use clear, structured academic language suitable for undergraduates.
-Define any finance-specific terms that are used.
-Explain your answer step-by-step, using markdown to highlight important points.
-Use numbered steps or bullet points where appropriate to guide reasoning.
-"""),
+#     "regular": base_template.format(style_instructions="""
+# Use clear, structured academic language suitable for undergraduates.
+# Define any finance-specific terms that are used.
+# Explain your answer step-by-step, using markdown to highlight important points.
+# Use numbered steps or bullet points where appropriate to guide reasoning.
+# """),
 
-    "in-depth": base_template.format(style_instructions="""
-Use precise technical language suitable for graduate students in finance.
-Be thorough and detailed in your reasoning, breaking down complex ideas clearly.
-If relevant, reference specific models, formulas, or textbook sections from the context.
-Use edge cases and equations when applicable.
-""")
-}
+#     "in-depth": base_template.format(style_instructions="""
+# Use precise technical language suitable for graduate students in finance.
+# Be thorough and detailed in your reasoning, breaking down complex ideas clearly.
+# If relevant, reference specific models, formulas, or textbook sections from the context.
+# """)
+# }
 
 
 # Factory function to create a chain for a given detail level
