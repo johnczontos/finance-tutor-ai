@@ -55,18 +55,21 @@ function App() {
     setCurrentQuiz(null);
     setShowSuggestions(false);
     setChatLoading(true);
-
+  
+    let fullResponse = '';
+  
     const assistantMsg: ChatMessage = {
       role: 'assistant',
       content: '',
       sources: [],
     };
     setMessages(prev => [...prev, assistantMsg]);
-
+  
     const url = `${API_BASE}/ask/stream?query=${encodeURIComponent(msg.content)}&detailLevel=${detailLevel}`;
     const eventSource = new EventSource(url);
-
+  
     eventSource.addEventListener('message', (event) => {
+      fullResponse += event.data;
       setMessages(prev =>
         prev.map((m, i) =>
           i === prev.length - 1
@@ -75,7 +78,7 @@ function App() {
         )
       );
     });
-
+  
     eventSource.addEventListener('metadata', (event) => {
       try {
         const parsed = JSON.parse(event.data);
@@ -91,30 +94,31 @@ function App() {
         console.error("Failed to parse metadata:", err);
       }
     });
-
-    eventSource.addEventListener('end', () => {
-      setChatLoading(false);
+  
+    eventSource.addEventListener('end', async () => {
       eventSource.close();
+      setChatLoading(false);
+  
+      if (knowledgeCheckEnabled) {
+        try {
+          setQuizLoading(true);
+          const quizData = await generateKnowledgeCheck(fullResponse);
+          setCurrentQuiz(quizData);
+        } catch {
+          // fail silently
+        } finally {
+          setQuizLoading(false);
+        }
+      }
     });
-
+  
     eventSource.onerror = (err) => {
       console.error("SSE error:", err);
       eventSource.close();
       setChatLoading(false);
     };
-
-    if (knowledgeCheckEnabled) {
-      try {
-        setQuizLoading(true);
-        const quizData = await generateKnowledgeCheck(msg.content);
-        setCurrentQuiz(quizData);
-      } catch {
-        // fail silently
-      } finally {
-        setQuizLoading(false);
-      }
-    }
   };
+  
 
   const clearChat = () => {
     setMessages([]);
