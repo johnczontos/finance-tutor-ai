@@ -15,7 +15,13 @@ import 'katex/dist/katex.min.css';
 const API_BASE = import.meta.env.VITE_API_URL || '';
 
 function App() {
-  const [messages, setMessages] = useState<ChatMessage[]>([]);
+  const [messages, setMessages] = useState<ChatMessage[]>([
+    {
+      role: 'assistant',
+      content: "👋 Hi! How can I help you today?",
+      sources: [],
+    },
+  ]);
   const [sidebarOpen, setSidebarOpen] = useState(false);
   const [knowledgeCheckEnabled, setKnowledgeCheckEnabled] = useState(false);
   const [sourcesDisplayEnabled, setSourcesDisplayEnabled] = useState(true);
