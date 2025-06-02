@@ -48,6 +48,11 @@ class QuizResponse(BaseModel):
     correctAnswer: str
     explanation: str
 
+class ExplanationRequest(BaseModel):
+    question: str
+    correctAnswer: str
+    userAnswer: str
+
 # Utility functions
 
 def build_prompt(question: str, context: str, detail_level: str) -> str:
@@ -254,6 +259,34 @@ def generate_quiz(request: QuizRequest):
         quiz_data = json.loads(content)
 
         return QuizResponse(**quiz_data)
+
+    except Exception as e:
+        raise HTTPException(status_code=500, detail=str(e))
+
+
+@app.post("/explain-answer")
+async def explain_answer(request: ExplanationRequest):
+    try:
+        prompt = (
+            f"The student was asked the following multiple-choice question:\n\n"
+            f"Question: {request.question}\n"
+            f"The correct answer was: {request.correctAnswer}\n"
+            f"The student answered: {request.userAnswer}\n\n"
+            f"Explain in 2-3 sentences why the student's answer was incorrect, and clarify why the correct answer is better. "
+            f"Be constructive and easy to understand. Speak directly to the student."
+        )
+
+        response = client.chat.completions.create(
+            model="gpt-4",
+            messages=[
+                {"role": "system", "content": "You are a helpful tutor providing feedback to a student."},
+                {"role": "user", "content": prompt}
+            ],
+            temperature=0.7,
+            max_tokens=200
+        )
+
+        return { "explanation": response.choices[0].message.content.strip() }
 
     except Exception as e:
         raise HTTPException(status_code=500, detail=str(e))

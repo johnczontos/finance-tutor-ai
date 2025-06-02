@@ -62,3 +62,19 @@ export async function generateKnowledgeCheck(topic: string) {
   if (!response.ok) throw new Error('Quiz generation failed');
   return await response.json();
 }
+
+export async function explainWrongAnswer(
+  question: string,
+  correctAnswer: string,
+  userAnswer: string
+) {
+  const response = await fetch(`${API_BASE}/explain-answer`, {
+    method: 'POST',
+    headers: { 'Content-Type': 'application/json' },
+    body: JSON.stringify({ question, correctAnswer, userAnswer }),
+  });
+
+  if (!response.ok) throw new Error('Explanation generation failed');
+  const data = await response.json();
+  return data.explanation;
+}
